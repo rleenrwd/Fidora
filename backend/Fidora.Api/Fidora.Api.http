@@ -1,6 +1,17 @@
-@Fidora.Api_HostAddress = http://localhost:5043
+@FidoraApi_HostAddress = http://localhost:5043
 
-GET {{Fidora.Api_HostAddress}}/weatherforecast/
+### Get all spaces
+GET {{FidoraApi_HostAddress}}/api/spaces
 Accept: application/json
 
 ###
+
+### Get space by id
+GET {{FidoraApi_HostAddress}}/api/spaces/3
+Accept: application/json
+
+###
+
+### Get missing space
+GET {{FidoraApi_HostAddress}}/api/spaces/999
+Accept: application/json

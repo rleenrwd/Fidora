@@ -1,4 +1,5 @@
 using Fidora.Api.Data;
+using Fidora.Api.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,8 @@ builder.Services.AddDbContext<FidoraDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("FidoraDatabase")));
     
+builder.Services.AddScoped<SpaceService>();
+
 
 var app = builder.Build();
 
