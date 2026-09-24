@@ -12,6 +12,14 @@ builder.Services.AddDbContext<FidoraDbContext>(options =>
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<FidoraDbContext>();
+
+    await Dbseeder.SeedAsync(context);
+}
+
+
 app.UseHttpsRedirection();
 
 app.MapControllers();
