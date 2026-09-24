@@ -16,7 +16,7 @@ using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider.GetRequiredService<FidoraDbContext>();
 
-    await Dbseeder.SeedAsync(context);
+    await DbSeeder.SeedAsync(context);
 }
 
 
