@@ -11,6 +11,7 @@ builder.Services.AddDbContext<FidoraDbContext>(options =>
         builder.Configuration.GetConnectionString("FidoraDatabase")));
     
 builder.Services.AddScoped<SpaceService>();
+builder.Services.AddScoped<SessionService>();
 
 
 var app = builder.Build();

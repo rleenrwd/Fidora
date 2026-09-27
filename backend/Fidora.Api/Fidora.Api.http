@@ -15,3 +15,37 @@ Accept: application/json
 ### Get missing space
 GET {{FidoraApi_HostAddress}}/api/spaces/999
 Accept: application/json
+
+### Get all sessions
+GET {{FidoraApi_HostAddress}}/api/sessions
+Accept: application/json
+
+###
+
+### Get session by id
+GET {{FidoraApi_HostAddress}}/api/sessions/1
+Accept: application/json
+
+###
+
+### Get missing session
+GET {{FidoraApi_HostAddress}}/api/sessions/999
+Accept: application/json
+
+###
+
+### Filter sessions by space
+GET {{FidoraApi_HostAddress}}/api/sessions?spaceId=1
+Accept: application/json
+
+###
+
+### Filter sessions by session type
+GET {{FidoraApi_HostAddress}}/api/sessions?sessionType=Focus50_10
+Accept: application/json
+
+###
+
+### Filter sessions by space and session type
+GET {{FidoraApi_HostAddress}}/api/sessions?spaceId=1&sessionType=StandardFocus
+Accept: application/json
