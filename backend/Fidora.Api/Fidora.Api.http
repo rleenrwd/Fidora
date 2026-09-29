@@ -1,6 +1,137 @@
-@Fidora.Api_HostAddress = http://localhost:5043
+@FidoraApi_HostAddress = http://localhost:5043
 
-GET {{Fidora.Api_HostAddress}}/weatherforecast/
+### Get all spaces
+GET {{FidoraApi_HostAddress}}/api/spaces
 Accept: application/json
 
 ###
+
+### Get space by id
+GET {{FidoraApi_HostAddress}}/api/spaces/3
+Accept: application/json
+
+###
+
+### Get missing space
+GET {{FidoraApi_HostAddress}}/api/spaces/999
+Accept: application/json
+
+### Get all sessions
+GET {{FidoraApi_HostAddress}}/api/sessions
+Accept: application/json
+
+###
+
+### Get session by id
+GET {{FidoraApi_HostAddress}}/api/sessions/1
+Accept: application/json
+
+###
+
+### Get missing session
+GET {{FidoraApi_HostAddress}}/api/sessions/999
+Accept: application/json
+
+###
+
+### Filter sessions by space
+GET {{FidoraApi_HostAddress}}/api/sessions?spaceId=1
+Accept: application/json
+
+###
+
+### Filter sessions by session type
+GET {{FidoraApi_HostAddress}}/api/sessions?sessionType=Focus50_10
+Accept: application/json
+
+###
+
+### Filter sessions by space and session type
+GET {{FidoraApi_HostAddress}}/api/sessions?spaceId=1&sessionType=StandardFocus
+Accept: application/json
+
+### Create booking
+POST {{FidoraApi_HostAddress}}/api/bookings
+Content-Type: application/json
+
+{
+  "sessionId": 7,
+  "customerName": "Robert Norwood",
+  "email": "robert@example.com",
+  "seatCount": 2
+}
+
+
+### Get booking
+GET {{FidoraApi_HostAddress}}/api/bookings/V688T3HQ
+Accept: application/json
+
+
+### Get booked session
+GET {{FidoraApi_HostAddress}}/api/sessions/7
+Accept: application/json
+
+### Cancel booking
+POST {{FidoraApi_HostAddress}}/api/bookings/V688T3HQ/cancel
+Accept: application/json
+
+### Create booking with invalid seat count
+POST {{FidoraApi_HostAddress}}/api/bookings
+Content-Type: application/json
+
+{
+  "sessionId": 7,
+  "customerName": "Robert Norwood",
+  "email": "robert@example.com",
+  "seatCount": 0
+}
+
+### Create booking with too many seats
+POST {{FidoraApi_HostAddress}}/api/bookings
+Content-Type: application/json
+
+{
+  "sessionId": 7,
+  "customerName": "Robert Norwood",
+  "email": "robert@example.com",
+  "seatCount": 999
+}
+
+### Create booking for missing session
+POST {{FidoraApi_HostAddress}}/api/bookings
+Content-Type: application/json
+
+{
+  "sessionId": 999,
+  "customerName": "Robert Norwood",
+  "email": "robert@example.com",
+  "seatCount": 1
+}
+
+### Get missing booking
+GET {{FidoraApi_HostAddress}}/api/bookings/DOESNOTEXIST
+Accept: application/json
+
+### Missing customer name
+POST {{FidoraApi_HostAddress}}/api/bookings
+Content-Type: application/json
+
+{
+  "sessionId": 7,
+  "customerName": "",
+  "email": "robert@example.com",
+  "seatCount": 1
+}
+
+###
+
+### Invalid email
+POST {{FidoraApi_HostAddress}}/api/bookings
+Content-Type: application/json
+
+{
+  "sessionId": 7,
+  "customerName": "Robert Norwood",
+  "email": "not-an-email",
+  "seatCount": 1
+}

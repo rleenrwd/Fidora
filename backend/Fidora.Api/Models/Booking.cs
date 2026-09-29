@@ -20,5 +20,5 @@ public class Booking
 
     public DateTime? CancelledAtUtc { get; set; }
 
-    public Session Session { get; set; } = null!;
+    public Session Session { get; set; } = null!; // navigation property, not a column. Allows access to the related session object in the session table.
 }
