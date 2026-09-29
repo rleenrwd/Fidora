@@ -1,3 +1,4 @@
+using System.Data;
 using System.Security.Cryptography;
 using Fidora.Api.Data;
 using Fidora.Api.DTOs;
@@ -17,6 +18,8 @@ public class BookingService
 
     public async Task<BookingResponse> CreateAsync(CreateBookingRequest request)
     {
+        await using var transaction = await _context.Database.BeginTransactionAsync(IsolationLevel.Serializable);
+
         var session = await _context.Sessions.Include(session => session.Space).FirstOrDefaultAsync(session => session.Id == request.SessionId);
 
         if (session is null)
@@ -56,6 +59,7 @@ public class BookingService
 
         await _context.Bookings.AddAsync(booking);
         await _context.SaveChangesAsync();
+        await transaction.CommitAsync();
 
         return MapToResponse(booking, session);
     }
