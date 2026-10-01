@@ -1,0 +1,136 @@
+.hero {
+  padding: 4rem 0 2rem;
+}
+
+.hero-main,
+.community-card {
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(17, 24, 39, 0.96),
+      rgba(30, 20, 55, 0.92)
+    );
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.hero-main {
+  min-height: 520px;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-eyebrow {
+  margin-bottom: 1rem;
+  color: #a78bfa;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.hero-title span {
+  display: block;
+  margin-top: 1.25rem;
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(90deg, #c084fc, #818cf8, #22d3ee);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-description {
+  max-width: 680px;
+  margin-top: 1.75rem;
+  color: #c4c1d1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.hero-features span {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ddd8eb;
+  font-size: 0.9rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hero-actions .btn-primary {
+  border: none;
+  background: linear-gradient(90deg, #7c3aed, #4f46e5);
+}
+
+.community-card {
+  height: 100%;
+  min-height: 520px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(168, 85, 247, 0.22),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(28, 20, 47, 0.95),
+      rgba(10, 10, 18, 0.98)
+    );
+}
+
+.community-card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.community-tagline {
+  margin-top: 1rem;
+  color: #c084fc;
+  font-weight: 600;
+}
+
+.community-card > p:last-child {
+  color: #aaa6b8;
+  line-height: 1.7;
+}
+
+@media (max-width: 991px) {
+  .hero-main {
+    min-height: auto;
+    padding: 2.5rem;
+  }
+
+  .community-card {
+    min-height: auto;
+    margin-top: 1rem;
+  }
+}

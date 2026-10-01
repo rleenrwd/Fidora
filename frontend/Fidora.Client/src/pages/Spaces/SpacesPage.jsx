@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getSpaces} from "../services/api";
+import {getSpaces} from "../../services/api";
 
 function SpacesPage() {
   const [spaces, setSpaces] = useState([]);
