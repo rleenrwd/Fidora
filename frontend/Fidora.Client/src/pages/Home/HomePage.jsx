@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-// import communityImage from "../../assets/fidora-community.png";
+import experienceImg from "../../assets/fidora-experience.png";
 import Navbar from "../../components/Navbar/Navbar";
 
 function HomePage() {
   return (
     <main className="home-page">
+       {/* MAIN HERO */}
       <section className="hero">
         <div className="container-fluid hero-container">
-            {/* MAIN HERO */}
 
             <div className="hero-main">
               <Navbar />
@@ -42,6 +42,43 @@ function HomePage() {
             </div>
         </div>
       </section>
+
+       {/* EXPERIENCE */}
+      <section className="experience-section">
+        <div className="experience-container">
+
+          <div className="experience-image">
+            <img
+              src={experienceImg}
+              alt="Students studying together at Fidora"
+            />
+          </div>
+
+          <div className="experience-content">
+            <p className="experience-eyebrow">
+              THE FIDORA EXPERIENCE
+            </p>
+
+            <h2>
+              An immersive lofi-inspired atmosphere.
+            </h2>
+
+            <h3>
+              Your New Spot for Social Studying
+            </h3>
+
+            <p className="experience-description">
+              Choose the aura that fits your night, reserve your spot,
+              and plug into curated lofi through silent-disco headphones.
+              Each room brings its own atmosphere, playlist, and energy —
+              giving you a new way to study around others without giving
+              up focus.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
     </main>
   );
 }
