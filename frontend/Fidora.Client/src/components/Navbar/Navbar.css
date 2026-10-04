@@ -1,35 +1,26 @@
 /************************************ MAIN NAVBAR ************************************/
 
 .fidora-navbar {
-  position: absolute;
+  position: fixed;
   top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-
   width: calc(100% - 10rem);
   max-width: 1060px;
-
-  z-index: 10;
-
+  z-index: 1000;
   min-height: 64px;
-
   display: flex;
   align-items: center;
-
   padding: 0.5rem 1.75rem;
-
   border: 1px solid rgba(217, 70, 239, 0.55);
+  border-radius: 10px;
+  background: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   box-shadow:
     0 0 14px rgba(217, 70, 239, 0.16),
     0 0 30px rgba(168, 85, 247, 0.1),
-    inset 0 0 20px rgba(168, 85, 247, 0.04);
-  border-radius: 10px;
-
-  background: rgba(8, 10, 22, 0.18);
-
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  
+    inset 0 0 20px rgba(44, 35, 52, 0.04);
 }
 
 
@@ -38,11 +29,8 @@
 .fidora-brand {
   margin-left: 1.5rem;
   margin-right: 5rem;
-
   color: #fff;
-
   text-decoration: none;
-
   font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -65,27 +53,19 @@
 .fidora-nav-links {
   display: flex;
   align-items: center;
-
   gap: 1.25rem;
-
   margin-left: auto;
   padding-right: 2.5rem;
 }
 
 .fidora-nav-link {
   position: relative;
-
   padding: 0.65rem 1rem;
-
   border: none;
-
   color: #f0edf7;
-
   text-decoration: none;
-
   font-size: 0.95rem;
   font-weight: 600;
-
   transition: color 0.2s ease;
 }
 
@@ -95,30 +75,22 @@
 
 .fidora-nav-link::after {
   content: "";
-
   position: absolute;
-
   left: 50%;
   bottom: 0.15rem;
-
   width: 0;
   height: 2px;
-
   border-radius: 999px;
-
   background: linear-gradient(
     90deg,
     #c084fc,
     #8b5cf6,
     #60a5fa
   );
-
   transform: translateX(-50%);
-
   box-shadow:
     0 0 6px rgba(192, 132, 252, 0.65),
     0 0 12px rgba(96, 165, 250, 0.3);
-
   transition: width 0.2s ease;
 }
 
@@ -138,111 +110,81 @@
 /************************************ MEDIA QUERIES ************************************/
 
 @media (min-width: 768.01px) and (max-width: 991.98px) {
-
   .fidora-navbar {
     width: calc(100% - 3rem);
     max-width: none;
-
     min-height: 60px;
-
     padding: 0.5rem 1.25rem;
   }
 
   .fidora-brand {
     width: auto;
-
     margin-left: 0.5rem;
     margin-right: auto;
-
     font-size: 1.4rem;
   }
 
   .fidora-nav-links {
     flex: initial;
-
     gap: 0.65rem;
-
     padding-right: 0;
   }
 
   .fidora-nav-link {
     padding: 0.5rem 0.4rem;
-
     font-size: 0.8rem;
-
     white-space: nowrap;
   }
 }
 
 
-@media (min-width: 576px) and (max-width: 768px) {
 
+@media (min-width: 576px) and (max-width: 768px) {
   .fidora-navbar {
     position: relative;
-
     top: auto;
     left: auto;
-
     transform: none;
-
-    width: calc(100% - 3rem);
+    width: calc(100% - 6rem);
     max-width: 440px;
-
-    margin: 1.25rem auto 1rem;
-
-    min-height: 58px;
-
+    margin: 0 auto;
     padding: 0.5rem 1rem;
-
+    min-height: 58px;
     flex-wrap: wrap;
+    z-index: 1000;
   }
 
   .fidora-brand {
     width: auto;
-
     margin: 0;
-
     font-size: 1.4rem;
   }
 
   .fidora-menu-toggle {
-    width: 40px;
-    height: 40px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-left: auto;
-
+    width: 40px;
+    height: 40px;
     border: none;
-
     background: transparent;
     color: #fff;
-
     font-size: 1.5rem;
   }
 
   .fidora-nav-links {
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     gap: 0.25rem;
-
     margin-left: 0;
     padding: 0 0.5rem;
-
     max-height: 0;
-
     overflow: hidden;
-
     opacity: 0;
-
     transform: translateY(-8px);
-
     visibility: hidden;
     pointer-events: none;
 
@@ -255,32 +197,23 @@
 
   .fidora-nav-links.open {
     max-height: 240px;
-
     padding: 0.75rem 0.5rem 0.25rem;
-
     opacity: 1;
-
     transform: translateY(0);
-
     visibility: visible;
     pointer-events: auto;
   }
 
   .fidora-nav-link {
     width: 100%;
-
     padding: 0.65rem 0.5rem;
-
     font-size: 0.85rem;
-
     text-align: left;
-
     white-space: normal;
   }
 
   .fidora-nav-link::after {
     left: 0.5rem;
-
     transform: none;
   }
 
@@ -294,77 +227,55 @@
 }
 
 
-@media (max-width: 575.98px) {
 
+@media (max-width: 575.98px) {
   .fidora-navbar {
     position: relative;
-
     top: auto;
     left: auto;
-
     transform: none;
-
-    width: calc(100% - 3rem);
+    width: calc(100% - 2rem);
     max-width: 440px;
-
-    margin: 1.25rem auto 1rem;
-
+    margin: 0 auto;
     min-height: 58px;
-
     padding: 0.5rem 1rem;
-
     flex-wrap: wrap;
+    z-index: 1000;
   }
 
   .fidora-brand {
     width: auto;
-
     margin: 0;
-
     font-size: 1.4rem;
   }
 
   .fidora-menu-toggle {
     width: 40px;
     height: 40px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     margin-left: auto;
-
     border: none;
-
     background: transparent;
     color: #fff;
-
     font-size: 1.5rem;
   }
 
   .fidora-nav-links {
     width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
     gap: 0.25rem;
-
     margin-left: 0;
     padding: 0 0.5rem;
-
     max-height: 0;
-
     overflow: hidden;
-
     opacity: 0;
-
     transform: translateY(-8px);
-
     visibility: hidden;
     pointer-events: none;
-
     transition:
       max-height 0.3s ease,
       opacity 0.2s ease,
@@ -374,32 +285,23 @@
 
   .fidora-nav-links.open {
     max-height: 240px;
-
     padding: 0.75rem 0.5rem 0.25rem;
-
     opacity: 1;
-
     transform: translateY(0);
-
     visibility: visible;
     pointer-events: auto;
   }
 
   .fidora-nav-link {
     width: 100%;
-
     padding: 0.65rem 0.5rem;
-
     font-size: 0.85rem;
-
     text-align: left;
-
     white-space: normal;
   }
 
   .fidora-nav-link::after {
     left: 0.5rem;
-
     transform: none;
   }
 

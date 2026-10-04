@@ -21,9 +21,9 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background:
+  /* background:
     radial-gradient(circle at top, #1a1630 0%, #0b0b12 45%),
-    #0b0b12;
+    #0b0b12; */
   color: #f5f3ff;
 }
 

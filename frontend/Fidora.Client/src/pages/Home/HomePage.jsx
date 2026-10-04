@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./HomePage.css";
 import experienceImg from "../../assets/fidora-experience.png";
 import Navbar from "../../components/Navbar/Navbar";
+import LocalPress from "../../components/LocalPress/LocalPress";
 
 function HomePage() {
   return (
@@ -9,7 +10,6 @@ function HomePage() {
        {/* MAIN HERO */}
       <section className="hero">
         <div className="container-fluid hero-container">
-
             <div className="hero-main">
               <Navbar />
               <p className="hero-eyebrow">FIND YOUR AURA.</p>
@@ -32,11 +32,11 @@ function HomePage() {
 
               <div className="hero-actions">
                 <Link to="/book" className="btn btn-primary">
-                  Book a Session <i class="bi bi-backpack"></i>
+                  Book a Session <i className="bi bi-backpack"></i>
                 </Link>
 
                 <Link to="/spaces" className="btn btn-outline-light">
-                  Explore Our Spaces <i class="bi bi-arrow-right"></i>
+                  Explore Our Spaces <i className="bi bi-arrow-right"></i>
                 </Link>
               </div>
             </div>
@@ -56,6 +56,7 @@ function HomePage() {
 
           <div className="experience-content">
             <p className="experience-eyebrow">
+              <span className="headphones-experience"><i className="bi bi-headphones"></i></span>
               THE FIDORA EXPERIENCE
             </p>
 
@@ -78,6 +79,9 @@ function HomePage() {
 
         </div>
       </section>
+
+      {/* LOCAL PRESS */}
+      <LocalPress />
 
     </main>
   );
