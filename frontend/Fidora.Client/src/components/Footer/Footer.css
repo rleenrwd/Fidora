@@ -1,0 +1,213 @@
+/************************************ FOOTER ************************************/
+
+.fidora-footer {
+  width: 100%;
+  padding: 3rem 4rem 2rem;
+  background: #060607;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.fidora-footer-container {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+
+/************************************ BRAND ************************************/
+
+.fidora-footer-brand h2 {
+  margin: 0;
+  color: #f8f9fa;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.fidora-footer-tagline {
+  width: fit-content;
+  margin: 0.6rem 0 0;
+  background: linear-gradient(
+    90deg,
+    #c084fc 0%,
+    #a855f7 25%,
+    #60a5fa 60%,
+    #38bdf8 82%,
+    #22d3ee 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.fidora-footer-copy {
+  margin: 0.7rem 0 0;
+  color: #8f8a9e;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+
+/************************************ NAVIGATION ************************************/
+
+.fidora-footer-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.fidora-footer-nav a {
+  position: relative;
+  color: #b8b4c3;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.fidora-footer-nav a:hover {
+  color: #ffffff;
+}
+
+.fidora-footer-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.35rem;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #a855f7,
+    #38bdf8
+  );
+  transition: width 0.2s ease;
+}
+
+.fidora-footer-nav a:hover::after,
+.fidora-footer-nav a.active::after {
+  width: 100%;
+}
+
+
+/************************************ BOTTOM ************************************/
+
+.fidora-footer-bottom {
+  grid-column: 1 / -1;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.fidora-footer-bottom p {
+  margin: 0;
+  color: #686473;
+  font-size: 0.8rem;
+}
+
+/************************************ RESPONSIVE ************************************/
+@media (min-width: 1200px) {
+  .fidora-footer-container {
+    max-width: 1100px;
+  }
+}
+
+/* LARGE TABLET / SMALL DESKTOP: 992px - 1199.98px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .fidora-footer {
+    padding: 3rem;
+  }
+}
+
+/* TABLET: 768.01px - 991.98px */
+@media (min-width: 768.01px) and (max-width: 991.98px) {
+  .fidora-footer {
+    padding: 2.75rem 2.5rem 2rem;
+  }
+
+  .fidora-footer-container {
+    gap: 2rem;
+  }
+
+  .fidora-footer-nav {
+    gap: 1.1rem;
+  }
+
+  .fidora-footer-nav a {
+    font-size: 0.85rem;
+  }
+}
+
+/* SMALL TABLET: 576px - 768px */
+@media (min-width: 576px) and (max-width: 768px) {
+  .fidora-footer {
+    padding: 2.75rem 2rem 2rem;
+  }
+
+  .fidora-footer-container {
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+  }
+
+  .fidora-footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 1.25rem 1.75rem;
+    align-items: start;
+  }
+
+  .fidora-footer-bottom {
+    padding-top: 1.4rem;
+  }
+}
+
+/* PHONES: below 576px */
+@media (max-width: 575.98px) {
+  .fidora-footer {
+    padding: 2.75rem 1rem 2rem;
+  }
+
+  .fidora-footer-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .fidora-footer-brand {
+    text-align: left;
+  }
+
+  .fidora-footer-brand h2 {
+    font-size: 1.8rem;
+  }
+
+  .fidora-footer-tagline {
+    font-size: 0.95rem;
+  }
+
+  .fidora-footer-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1rem;
+  }
+
+  .fidora-footer-nav a {
+    width: fit-content;
+    font-size: 0.85rem;
+  }
+
+  .fidora-footer-bottom {
+    padding-top: 1.4rem;
+  }
+
+  .fidora-footer-bottom p {
+    font-size: 0.75rem;
+  }
+}
+

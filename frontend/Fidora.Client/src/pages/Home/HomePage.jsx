@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./HomePage.css";
 import focusLoungeImg from "../../assets/focus-lounge.png";
 import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 import LocalPress from "../../components/LocalPress/LocalPress";
 import FeaturedSpaces from "../../components/FeaturedSpaces/FeaturedSpaces";
 
@@ -87,7 +88,12 @@ function HomePage() {
 
       {/* SPACES */}
       <FeaturedSpaces />
+
+      
+    {/* FOOTER */}
+      <Footer />
     </main>
+
   );
 }
 
