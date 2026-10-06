@@ -75,6 +75,7 @@
 
 .hero-title span {
   display: block;
+  width: fit-content;
 
   margin-top: 0.8rem;
 
@@ -122,6 +123,13 @@
   font-size: 0.9rem;
 }
 
+.hero-features span:hover {
+  transform: translateY(-2px);
+  border-color: rgba(167, 139, 250, 0.7);
+  background: rgba(167, 139, 250, 0.08);
+  color: #f8f9fa;
+}
+
 
 /************************************ HERO ACTIONS ************************************/
 
@@ -134,15 +142,42 @@
 
 .hero-actions .btn-primary {
   border: none;
+  border: 2px solid rgba(167, 139, 250, 0.35);
   background: linear-gradient(
     90deg,
     #7c3aed,
     #4f46e5
   );
+  transition: transform 0.2s ease;
+}
+
+.hero-actions .btn-primary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(167, 139, 250, 0.7);
 }
 
 .hero-actions .btn i {
   margin-left: 0.4rem;
+}
+
+.btn-outline-light {
+   border: 2px solid rgba(167, 139, 250, 0.35);
+   color: #f8f9fa;
+   background: rgba(255, 255, 255, 0.03);
+
+   text-decoration: none;
+ 
+   transition:
+     border-color 0.2s ease,
+     background 0.2s ease,
+     transform 0.2s ease;
+}
+
+.btn-outline-light:hover {
+  border-color: rgba(167, 139, 250, 0.7);
+  background: rgba(167, 139, 250, 0.08);
+  color: #f8f9fa;
+  transform: translateY(-2px);
 }
 
 
@@ -199,11 +234,12 @@
 }
 
 .experience-content h3 {
+  width: fit-content;
   margin: 1.5rem 0 0;
   font-size: clamp(1.35rem, 2vw, 1.9rem);
   font-weight: 700;
 
- background: linear-gradient(
+  background: linear-gradient(
     90deg,
     #c084fc 0%,
     #a855f7 25%,
@@ -211,6 +247,7 @@
     #38bdf8 82%,
     #22d3ee 100%
   );
+
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

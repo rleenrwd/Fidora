@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-import experienceImg from "../../assets/fidora-experience.png";
+import focusLoungeImg from "../../assets/focus-lounge.png";
 import Navbar from "../../components/Navbar/Navbar";
 import LocalPress from "../../components/LocalPress/LocalPress";
+import FeaturedSpaces from "../../components/FeaturedSpaces/FeaturedSpaces";
+
 
 function HomePage() {
   return (
@@ -49,7 +51,7 @@ function HomePage() {
 
           <div className="experience-image">
             <img
-              src={experienceImg}
+              src={focusLoungeImg}
               alt="Students studying together at Fidora"
             />
           </div>
@@ -83,6 +85,8 @@ function HomePage() {
       {/* LOCAL PRESS */}
       <LocalPress />
 
+      {/* SPACES */}
+      <FeaturedSpaces />
     </main>
   );
 }

@@ -9,3 +9,7 @@ export async function getSpaces() {
 
     return response.json();
 }
+
+export function getApiAssetUrl(path) {
+    return `${API_BASE_URL}${path}`;
+}
