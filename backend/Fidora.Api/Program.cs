@@ -22,6 +22,13 @@ builder.Services.AddScoped<SpaceService>();
 builder.Services.AddScoped<SessionService>();
 builder.Services.AddScoped<BookingService>();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Frontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173").AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -34,6 +41,10 @@ using (var scope = app.Services.CreateScope())
 
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
+
+app.UseCors("Frontend");
 
 app.MapControllers();
 

@@ -19,7 +19,7 @@ public static class DbSeeder
                     Aura = "Energetic & Social",
                     LofiStyle = "Lofi Hip-Hop",
                     Capacity = 30,
-                    ImageUrl = "/images/focus-lounge.jpg"
+                    ImageUrl = "/images/spaces/focus-lounge.png"
                 },
 
                 new Space
@@ -30,7 +30,7 @@ public static class DbSeeder
                     Aura = "Calm & Late-Night",
                     LofiStyle = "Lofi Jazz",
                     Capacity = 20,
-                    ImageUrl = "/images/night-owl-room.jpg"
+                    ImageUrl = "/images/spaces/night-owl-room.png"
                 },
 
                 new Space
@@ -41,7 +41,7 @@ public static class DbSeeder
                     Aura = "Quiet & Focused",
                     LofiStyle = "Ambient Lofi",
                     Capacity = 10,
-                    ImageUrl = "/images/deep-work-booth.jpg"
+                    ImageUrl = "/images/spaces/deep-work-booth.png"
                 }
             };
 

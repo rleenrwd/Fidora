@@ -1,0 +1,154 @@
+/************************************ LOCAL PRESS ************************************/
+
+.local-press {
+  width: 100%;
+  padding: 1.35rem 2rem;
+  background: #060607;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.local-press-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/************************************ PRESS LABEL ************************************/
+
+.local-press-label {
+  margin: 0 0 1rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+}
+
+/************************************ DESKTOP PRESS MARQUEE ************************************/
+
+.local-press-logos {
+  width: 100%;
+  overflow: hidden;
+}
+
+.local-press-track {
+  display: flex;
+  width: max-content;
+  animation: press-scroll 32s linear infinite;
+}
+
+.local-press-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.local-press-group img {
+  display: block;
+  width: 240px;
+  height: 42px;
+  padding: 0 2rem;
+  object-fit: contain;
+  flex: 0 0 240px;
+  box-sizing: border-box;
+  opacity: 0.7;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.local-press-group img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.local-press-logos:hover .local-press-track {
+  animation-play-state: paused;
+}
+
+.bee-logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.75;
+}
+
+
+/************************************ MARQUEE ANIMATION ************************************/
+
+@keyframes press-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/************************************ ROTATING MOBILE / TABLET LOGOS ************************************/
+
+.local-press-mobile {
+  display: none;
+}
+
+
+/************************************ RESPONSIVE ************************************/
+
+
+@media (max-width: 1052.98px) {
+
+  .local-press-logos {
+    display: none;
+  }
+
+  .local-press-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+  }
+
+  .local-press-mobile img {
+    display: block;
+    width: auto;
+    max-width: 190px;
+    height: auto;
+    max-height: 42px;
+    object-fit: contain;
+  }
+
+  .local-press-mobile .bee-logo {
+    max-width: 210px;
+  }
+}
+
+
+
+@media (max-width: 575.98px) {
+  .local-press {
+    padding: 1.25rem 0;
+  }
+
+  .local-press-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .local-press-label {
+    margin-bottom: 1rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-align: center;
+  }
+
+  .local-press-mobile img {
+    max-width: 170px;
+    max-height: 42px;
+  }
+
+  .local-press-mobile .bee-logo {
+    max-width: 190px;
+  }
+}

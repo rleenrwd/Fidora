@@ -1,0 +1,601 @@
+/************************************ HERO SECTION ************************************/
+
+.home-page {
+  min-height: 100vh;
+  color: #f8f9fa;
+  background: #070b16;
+}
+
+.hero {
+  width: 100%;
+  padding: 0;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-main {
+  position: relative;
+
+  width: 100%;
+  min-height: 640px;
+
+  padding: 5.5rem 4rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  border: none;
+  border-radius: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 11, 22, 0.88) 0%,
+      rgba(7, 11, 22, 0.68) 45%,
+      rgba(7, 11, 22, 0.25) 100%
+    ),
+    url("../../assets/fidora-hero.png");
+
+  background-size: cover;
+  background-position: center 60%;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+
+/************************************ HERO CONTENT ************************************/
+
+.hero-eyebrow {
+  margin-top: 2rem;
+  margin-bottom: 0.65rem;
+
+  color: #a78bfa;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.hero-title {
+  margin: 0;
+
+  font-size: clamp(4rem, 9vw, 8rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+}
+
+.hero-title span {
+  display: block;
+  width: fit-content;
+
+  margin-top: 0.8rem;
+
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  line-height: 1.3;
+  letter-spacing: -0.04em;
+  background: linear-gradient(
+    90deg,
+    #c084fc 0%,
+    #a855f7 25%,
+    #60a5fa 60%,
+    #38bdf8 82%,
+    #22d3ee 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-description {
+  max-width: 680px;
+  margin-top: 1.2rem;
+  color: #c4c1d1;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+
+/************************************ HERO FEATURES ************************************/
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.hero-features span {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #ddd8eb;
+  font-size: 0.9rem;
+}
+
+.hero-features span:hover {
+  transform: translateY(-2px);
+  border-color: rgba(167, 139, 250, 0.7);
+  background: rgba(167, 139, 250, 0.08);
+  color: #f8f9fa;
+}
+
+
+/************************************ HERO ACTIONS ************************************/
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.hero-actions .btn-primary {
+  border: none;
+  border: 2px solid rgba(167, 139, 250, 0.35);
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #4f46e5
+  );
+  transition: transform 0.2s ease;
+}
+
+.hero-actions .btn-primary:hover {
+  transform: translateY(-2px);
+  border-color: rgba(167, 139, 250, 0.7);
+}
+
+.hero-actions .btn i {
+  margin-left: 0.4rem;
+}
+
+.btn-outline-light {
+   border: 2px solid rgba(167, 139, 250, 0.35);
+   color: #f8f9fa;
+   background: rgba(255, 255, 255, 0.03);
+
+   text-decoration: none;
+ 
+   transition:
+     border-color 0.2s ease,
+     background 0.2s ease,
+     transform 0.2s ease;
+}
+
+.btn-outline-light:hover {
+  border-color: rgba(167, 139, 250, 0.7);
+  background: rgba(167, 139, 250, 0.08);
+  color: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+
+/************************************ EXPERIENCE SECTION ************************************/
+
+
+/************************************ EXPERIENCE CONTAINER ************************************/
+.experience-container {
+  width: 100%;
+  background: #070b16;
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem;
+  margin-bottom: 20px;
+}
+
+/************************************ EXPERIENCE CONTENT ************************************/
+
+.experience-content {
+  min-width: 0;
+  padding-left: 4rem;
+}
+
+.headphones-experience {
+  font-size: 3rem;
+  filter:
+    drop-shadow(0 0 4px rgba(167, 139, 250, 0.8))
+    drop-shadow(0 0 10px rgba(168, 85, 247, 0.55))
+    drop-shadow(0 0 18px rgba(96, 165, 250, 0.25));
+}
+
+.experience-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #a78bfa;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.experience-content h2 {
+  max-width: 620px;
+  margin: 0;
+  /* color: #11131a; */
+  color: white;
+  background: none;
+  /* -webkit-text-fill-color: #11131a; */
+  font-size: clamp(2.7rem, 4vw, 4.6rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.experience-content h2::first-line {
+  color: #f8f9fa;
+}
+
+.experience-content h3 {
+  width: fit-content;
+  margin: 1.5rem 0 0;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 700;
+
+  background: linear-gradient(
+    90deg,
+    #c084fc 0%,
+    #a855f7 25%,
+    #60a5fa 60%,
+    #38bdf8 82%,
+    #22d3ee 100%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.experience-description {
+  max-width: 620px;
+  margin: 1.25rem 0 0;
+  color: #aaa6b8;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.experience-content::after {
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #4f46e5,
+    #2563eb
+  );}
+
+/************************************ EXPERIENCE IMAGE ************************************/
+
+.experience-image {
+  position: relative;
+  left: 2rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(217, 70, 239, 0.55);
+  box-shadow:
+    0 0 18px rgba(217, 70, 239, 0.22),
+    0 0 38px rgba(168, 85, 247, 0.16),
+    0 14px 35px rgba(0, 0, 0, 0.28);
+}
+
+.experience-image img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: 80% bottom;
+}
+
+.experience-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 11, 22, 0.1);
+  pointer-events: none;
+}
+
+
+
+/************************************ EXPERIENCE ACCENT ************************************/
+
+.experience-content::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin-top: 2rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #c084fc,
+    #8b5cf6,
+    #60a5fa
+  );
+
+  box-shadow:
+    0 0 10px rgba(168, 85, 247, 0.3),
+    0 0 16px rgba(96, 165, 250, 0.15);
+}
+
+
+/************************************ MEDIA QUERIES ************************************/
+@media (min-width: 1885px) {
+  .experience-section {
+    padding: 3rem 2rem;
+  }
+  
+  .experience-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 6rem;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1884px) {
+  .experience-content {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1884px) {
+  .experience-section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .experience-section {
+    padding: 3rem 2rem;
+  }
+
+  .experience-container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .experience-image {
+    left: 1rem;
+  }
+
+  .experience-content {
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 768.01px) and (max-width: 991.98px) {
+
+  .hero-main {
+    padding: 5.5rem 2.5rem 2.5rem;
+  }
+
+  .hero-description {
+    max-width: 540px;
+    font-size: 1rem;
+  }
+
+  .hero-features {
+    gap: 0.6rem;
+  }
+
+  .hero-features span {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .experience-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+  }
+
+  .experience-content {
+    order: 1;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .experience-description {
+    max-width: 620px;
+    margin: 1.25rem 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .experience-image {
+    order: 2;
+    left: 0;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .headphones-experience {
+    font-size: 1.7rem;
+  }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+  .hero-main {
+    justify-content: flex-start;
+    padding: 1.25rem 2rem 2.5rem;
+  }
+
+  .hero-eyebrow {
+    margin-top: 3.5rem;
+  }
+
+  .hero-description {
+    max-width: 540px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-features {
+    gap: 0.6rem;
+  }
+
+  .hero-features span {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .experience-section {
+    padding-top: 2rem;
+  }
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem;
+
+  }
+
+  .experience-content {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 0;
+  }
+
+
+  .experience-image {
+    order: 2;
+    left: 0;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .headphones-experience {
+    font-size: 1.7rem;
+  }
+
+  .experience-description {
+    max-width: 540px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+
+
+@media (max-width: 575.98px) {
+
+  .hero-main {
+    justify-content: flex-start;
+    padding: 1.25rem 1rem 2.5rem;
+  }
+
+  .hero-eyebrow {
+    margin-top: 4rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .hero-features {
+    display: none;
+  }
+
+  .hero-actions {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 0.7rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .experience-section{
+    padding: 4rem 1rem;
+  }
+
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0;
+    margin-top: -20px;
+  }
+
+  .experience-content {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .experience-content h2 {
+    font-size: 2.35rem;
+    line-height: 1.05;
+  }
+
+  .experience-content h3 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .experience-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .experience-image {
+    order: 2;
+    left: 0;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .headphones-experience {
+    font-size: 1.7rem;
+  }
+
+  .experience-eyebrow {
+    margin-top: 1rem;
+  }
+
+  .hero-eyebrow,
+  .experience-eyebrow,
+  .featured-spaces-eyebrow,
+  .community-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+  }
+}
+
