@@ -43,7 +43,7 @@ function FeaturedSpaces() {
 
                 <div className="featured-spaces-intro">
                 <p className="featured-spaces-eyebrow">
-                    CHOOSE YOUR AURA
+                    CHOOSE YOUR AURA.
                 </p>
 
                 <h2 className="featured-spaces-title">

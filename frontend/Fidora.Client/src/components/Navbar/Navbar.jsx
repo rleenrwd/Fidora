@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <nav className="fidora-navbar">
       <NavLink to="/" className="fidora-brand" onClick={closeMenu}>
-        Fidora
+        <i className="bi bi-headphones headphones-experience"></i>   Fidora
       </NavLink>
 
       <button

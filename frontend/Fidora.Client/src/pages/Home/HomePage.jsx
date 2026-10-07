@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import LocalPress from "../../components/LocalPress/LocalPress";
 import FeaturedSpaces from "../../components/FeaturedSpaces/FeaturedSpaces";
+import StudentCommunity from "../../components/StudentCommunity/StudentCommunity";
 
 
 function HomePage() {
@@ -59,12 +60,12 @@ function HomePage() {
 
           <div className="experience-content">
             <p className="experience-eyebrow">
-              <span className="headphones-experience"><i className="bi bi-headphones"></i></span>
-              THE FIDORA EXPERIENCE
+      
+              THE FIDORA EXPERIENCE.
             </p>
 
             <h2>
-              An immersive lofi-inspired atmosphere.
+              An Immersive Lofi-Inspired Atmosphere.
             </h2>
 
             <h3>
@@ -89,7 +90,9 @@ function HomePage() {
       {/* SPACES */}
       <FeaturedSpaces />
 
-      
+    {/* STUDENT COMMUNITY */}
+    <StudentCommunity />
+
     {/* FOOTER */}
       <Footer />
     </main>
