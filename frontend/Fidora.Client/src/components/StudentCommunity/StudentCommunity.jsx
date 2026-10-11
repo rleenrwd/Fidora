@@ -80,7 +80,7 @@ function StudentCommunity() {
           </div>
 
           <Link
-            to="/book"
+            to="/spaces"
             className="community-cta"
           >
             Get Started

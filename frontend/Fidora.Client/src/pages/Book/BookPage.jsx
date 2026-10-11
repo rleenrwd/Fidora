@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { DayPicker } from "@daypicker/react";
-
+import { useSearchParams } from "react-router-dom";
 import "@daypicker/react/style.css";
 
 import Navbar from "../../components/Navbar/Navbar";
@@ -53,6 +53,8 @@ const roomAccentColors = {
 };
 
 function BookPage() {
+  const [searchParams] = useSearchParams();
+  const requestedSpaceId = searchParams.get("spaceId");
   const [spaces, setSpaces] = useState([]);
   const [selectedSpace, setSelectedSpace] = useState(null);
   const [spacesLoading, setSpacesLoading] = useState(true);
@@ -85,9 +87,12 @@ function BookPage() {
 
         setSpaces(data);
 
-        if (data.length > 0) {
-          setSelectedSpace(data[0]);
-        }
+    const matchingSpace = data.find(
+      (space) => String(space.id) === requestedSpaceId
+    );
+
+    setSelectedSpace(matchingSpace ?? data[0] ?? null);
+
       } catch (err) {
         if (!cancelled) {
           setSpacesError(err.message);
@@ -104,7 +109,7 @@ function BookPage() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [requestedSpaceId]);
 
   useEffect(() => {
     if (!selectedSpace || !selectedDate) {
@@ -257,7 +262,7 @@ function BookPage() {
           <div className="booking-showcase">
             <section className="book-page-heading">
               <p className="book-page-eyebrow">
-                DIFFERENT AURAS. SAME VISION.
+                BOOK YOUR AURA.
               </p>
 
               <h1>

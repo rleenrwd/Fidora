@@ -194,6 +194,12 @@
   flex-shrink: 0;
 }
 
+.book-page .booking-space-aura-badge {
+  color: rgb(var(--room-accent));
+  border-color: rgba(var(--room-accent), 0.7);
+  background: rgba(8, 11, 22, 0.85);
+}
+
 .booking-space-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1262,6 +1268,17 @@
     padding: 0.5rem 1rem;
     flex-wrap: wrap;
     z-index: 1000;
+  }
+
+  .book-page-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+  }
+
+  .book-page-heading h1 {
+    font-size: 2.35rem;
+    line-height: 1.05;
   }
 
   .book-page .book-page-heading {
