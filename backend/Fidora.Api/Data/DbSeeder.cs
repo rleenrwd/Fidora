@@ -7,48 +7,6 @@ public static class DbSeeder
 {
     public static async Task SeedAsync(FidoraDbContext context)
     {
-        if (!await context.Spaces.AnyAsync())
-        {
-            var spaces = new[]
-            {
-                new Space
-                {
-                    Name = "Focus Lounge",
-                    Slug = "focus-lounge",
-                    Description = "A social, energetic study space designed for focused work around others.",
-                    Aura = "Energetic & Social",
-                    LofiStyle = "Lofi Hip-Hop",
-                    Capacity = 30,
-                    ImageUrl = "/images/spaces/focus-lounge.png"
-                },
-
-                new Space
-                {
-                    Name = "Night Owl Room",
-                    Slug = "night-owl-room",
-                    Description = "A darker, calmer study environment built for relaxed late-night focus.",
-                    Aura = "Calm & Late-Night",
-                    LofiStyle = "Lofi Jazz",
-                    Capacity = 20,
-                    ImageUrl = "/images/spaces/night-owl-room.png"
-                },
-
-                new Space
-                {
-                    Name = "Deep Work Booth",
-                    Slug = "deep-work-booth",
-                    Description = "A minimal-distraction space for concentrated individual work.",
-                    Aura = "Quiet & Focused",
-                    LofiStyle = "Ambient Lofi",
-                    Capacity = 10,
-                    ImageUrl = "/images/spaces/deep-work-booth.png"
-                }
-            };
-
-            await context.Spaces.AddRangeAsync(spaces);
-            await context.SaveChangesAsync();
-        }
-
         if (!await context.Sessions.AnyAsync())
         {
             var focusLounge = await context.Spaces
@@ -62,72 +20,85 @@ public static class DbSeeder
 
             var now = DateTimeOffset.Now;
 
-            var tomorrow = new DateTimeOffset(
+            var startDate = new DateTimeOffset(
                 now.Year,
                 now.Month,
                 now.Day,
                 0,
                 0,
                 0,
-                now.Offset)
-                .AddDays(1);
+                now.Offset);
 
-            var sessions = new[]
+            var endDate = new DateTimeOffset(
+                2026,
+                12,
+                31,
+                0,
+                0,
+                0,
+                now.Offset);
+
+            var sessions = new List<Session>();
+
+            for (var date = startDate; date <= endDate; date = date.AddDays(1))
             {
-                new Session
+                // Focus Lounge
+                sessions.Add(new Session
                 {
                     SpaceId = focusLounge.Id,
-                    StartTime = tomorrow.AddHours(10),
-                    EndTime = tomorrow.AddHours(12),
+                    StartTime = date.AddHours(10),
+                    EndTime = date.AddHours(12),
                     Capacity = 30,
                     SessionType = SessionType.StandardFocus
-                },
+                });
 
-                new Session
+                sessions.Add(new Session
                 {
                     SpaceId = focusLounge.Id,
-                    StartTime = tomorrow.AddHours(18),
-                    EndTime = tomorrow.AddHours(20),
+                    StartTime = date.AddHours(18),
+                    EndTime = date.AddHours(20),
                     Capacity = 30,
                     SessionType = SessionType.Focus50_10
-                },
+                });
 
-                new Session
+                // Night Owl Room
+                sessions.Add(new Session
                 {
                     SpaceId = nightOwlRoom.Id,
-                    StartTime = tomorrow.AddHours(19),
-                    EndTime = tomorrow.AddHours(21),
+                    StartTime = date.AddHours(19),
+                    EndTime = date.AddHours(21),
                     Capacity = 20,
                     SessionType = SessionType.StandardFocus
-                },
+                });
 
-                new Session
+                sessions.Add(new Session
                 {
                     SpaceId = nightOwlRoom.Id,
-                    StartTime = tomorrow.AddDays(1).AddHours(20),
-                    EndTime = tomorrow.AddDays(1).AddHours(22),
+                    StartTime = date.AddHours(21),
+                    EndTime = date.AddHours(23),
                     Capacity = 20,
                     SessionType = SessionType.Focus50_10
-                },
+                });
 
-                new Session
+                // Deep Work Booth
+                sessions.Add(new Session
                 {
                     SpaceId = deepWorkBooth.Id,
-                    StartTime = tomorrow.AddHours(9),
-                    EndTime = tomorrow.AddHours(11),
+                    StartTime = date.AddHours(9),
+                    EndTime = date.AddHours(11),
                     Capacity = 10,
                     SessionType = SessionType.StandardFocus
-                },
+                });
 
-                new Session
+                sessions.Add(new Session
                 {
                     SpaceId = deepWorkBooth.Id,
-                    StartTime = tomorrow.AddDays(1).AddHours(14),
-                    EndTime = tomorrow.AddDays(1).AddHours(16),
+                    StartTime = date.AddHours(14),
+                    EndTime = date.AddHours(16),
                     Capacity = 10,
                     SessionType = SessionType.Focus50_10
-                }
-            };
+                });
+            }
 
             await context.Sessions.AddRangeAsync(sessions);
             await context.SaveChangesAsync();
