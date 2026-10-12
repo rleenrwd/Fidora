@@ -83,7 +83,7 @@ function FeaturedSpaces() {
 
                 {!isLoading &&
                     !error &&
-                    spaces.slice(0, 3).map((space, index) => (
+                    spaces.slice(0, 3).map((space) => (
                     <article
                         key={space.id}
                         className={`featured-space-card ${space.slug}`}
@@ -104,18 +104,10 @@ function FeaturedSpaces() {
 
                         <div className="featured-space-heading">
                             <h3>{space.name}</h3>
-
-                            <span className="featured-space-number">
-                            {String(index + 1).padStart(2, "0")}
-                            </span>
                         </div>
 
-                        <p className="featured-space-vibe">
-                            {space.aura}
-                        </p>
-
                         <p className="featured-space-description">
-                            {space.description}
+                            <i>{space.description}</i>
                         </p>
 
                         <div className="featured-space-meta">

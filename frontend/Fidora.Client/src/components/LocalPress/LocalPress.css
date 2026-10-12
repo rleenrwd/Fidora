@@ -1,4 +1,4 @@
-/************************************ LOCAL PRESS ************************************/
+/* ==================== LOCAL PRESS SECTION ==================== */
 
 .local-press {
   width: 100%;
@@ -7,6 +7,8 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+/* ==================== MAIN CONTAINER ==================== */
+
 .local-press-container {
   width: 100%;
   max-width: 1600px;
@@ -14,8 +16,7 @@
   text-align: center;
 }
 
-
-/************************************ PRESS LABEL ************************************/
+/* ==================== PRESS LABEL ==================== */
 
 .local-press-label {
   margin: 0 0 1rem;
@@ -25,7 +26,7 @@
   letter-spacing: 0.10em;
 }
 
-/************************************ DESKTOP PRESS MARQUEE ************************************/
+/* ==================== DESKTOP PRESS MARQUEE ==================== */
 
 .local-press-logos {
   width: 100%;
@@ -43,6 +44,8 @@
   align-items: center;
   flex-shrink: 0;
 }
+
+/* ==================== DESKTOP PRESS LOGOS ==================== */
 
 .local-press-group img {
   display: block;
@@ -67,13 +70,14 @@
   animation-play-state: paused;
 }
 
+/* ==================== SACRAMENTO BEE LOGO ==================== */
+
 .bee-logo {
   filter: brightness(0) invert(1);
   opacity: 0.75;
 }
 
-
-/************************************ MARQUEE ANIMATION ************************************/
+/* ==================== MARQUEE ANIMATION ==================== */
 
 @keyframes press-scroll {
   from {
@@ -85,22 +89,24 @@
   }
 }
 
-
-/************************************ ROTATING MOBILE / TABLET LOGOS ************************************/
+/* ==================== ROTATING MOBILE AND TABLET LOGOS ==================== */
 
 .local-press-mobile {
   display: none;
 }
 
+/* ==================== RESPONSIVE STYLES ==================== */
 
-/************************************ RESPONSIVE ************************************/
-
+/* ---------- 1052.98px AND BELOW ---------- */
 
 @media (max-width: 1052.98px) {
+  /* ---------- DESKTOP MARQUEE VISIBILITY ---------- */
 
   .local-press-logos {
     display: none;
   }
+
+  /* ---------- ROTATING LOGO CONTAINER ---------- */
 
   .local-press-mobile {
     display: flex;
@@ -109,6 +115,8 @@
     width: 100%;
     height: 48px;
   }
+
+  /* ---------- ROTATING PRESS LOGOS ---------- */
 
   .local-press-mobile img {
     display: block;
@@ -124,17 +132,23 @@
   }
 }
 
-
+/* ---------- 575.98px AND BELOW ---------- */
 
 @media (max-width: 575.98px) {
+  /* ---------- LOCAL PRESS SECTION ---------- */
+
   .local-press {
     padding: 1.25rem 0;
   }
+
+  /* ---------- MAIN CONTAINER ---------- */
 
   .local-press-container {
     width: 100%;
     padding: 0 1rem;
   }
+
+  /* ---------- PRESS LABEL ---------- */
 
   .local-press-label {
     margin-bottom: 1rem;
@@ -142,6 +156,8 @@
     letter-spacing: 0.15em;
     text-align: center;
   }
+
+  /* ---------- ROTATING PRESS LOGOS ---------- */
 
   .local-press-mobile img {
     max-width: 170px;

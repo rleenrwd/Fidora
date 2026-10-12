@@ -1,10 +1,12 @@
-/************************************ HERO SECTION ************************************/
+/* ==================== PAGE ==================== */
 
 .home-page {
   min-height: 100vh;
   color: #f8f9fa;
   background: #070b16;
 }
+
+/* ==================== HERO SECTION ==================== */
 
 .hero {
   width: 100%;
@@ -20,19 +22,14 @@
 
 .hero-main {
   position: relative;
-
   width: 100%;
   min-height: 640px;
-
   padding: 5.5rem 4rem 4rem;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   border: none;
   border-radius: 0;
-
   background:
     linear-gradient(
       90deg,
@@ -40,25 +37,19 @@
       rgba(7, 11, 22, 0.68) 45%,
       rgba(7, 11, 22, 0.25) 100%
     ),
-    url("../../assets/fidora-hero.png");
-
+    url("../../assets/homepage/fidora-hero.png");
   background-size: cover;
   background-position: center 60%;
   background-repeat: no-repeat;
-
   overflow: hidden;
 }
 
-
-
-/************************************ HERO CONTENT ************************************/
+/* ==================== HERO CONTENT ==================== */
 
 .hero-eyebrow {
   margin-top: 2rem;
   margin-bottom: 0.65rem;
-
   color: #a78bfa;
-
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.18em;
@@ -66,7 +57,6 @@
 
 .hero-title {
   margin: 0;
-
   font-size: clamp(4rem, 9vw, 8rem);
   font-weight: 800;
   line-height: 0.9;
@@ -76,9 +66,7 @@
 .hero-title span {
   display: block;
   width: fit-content;
-
   margin-top: 0.8rem;
-
   font-size: clamp(1.8rem, 4vw, 3.4rem);
   line-height: 1.3;
   letter-spacing: -0.04em;
@@ -90,7 +78,6 @@
     #38bdf8 82%,
     #22d3ee 100%
   );
-
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -104,8 +91,7 @@
   line-height: 1.65;
 }
 
-
-/************************************ HERO FEATURES ************************************/
+/* ==================== HERO FEATURES ==================== */
 
 .hero-features {
   display: flex;
@@ -130,8 +116,7 @@
   color: #f8f9fa;
 }
 
-
-/************************************ HERO ACTIONS ************************************/
+/* ==================== HERO ACTIONS ==================== */
 
 .hero-actions {
   display: flex;
@@ -160,17 +145,17 @@
   margin-left: 0.4rem;
 }
 
-.btn-outline-light {
-   border: 2px solid rgba(167, 139, 250, 0.35);
-   color: #f8f9fa;
-   background: rgba(255, 255, 255, 0.03);
+/* ==================== OUTLINE BUTTON ==================== */
 
-   text-decoration: none;
- 
-   transition:
-     border-color 0.2s ease,
-     background 0.2s ease,
-     transform 0.2s ease;
+.btn-outline-light {
+  border: 2px solid rgba(167, 139, 250, 0.35);
+  color: #f8f9fa;
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .btn-outline-light:hover {
@@ -180,11 +165,8 @@
   transform: translateY(-2px);
 }
 
+/* ==================== EXPERIENCE CONTAINER ==================== */
 
-/************************************ EXPERIENCE SECTION ************************************/
-
-
-/************************************ EXPERIENCE CONTAINER ************************************/
 .experience-container {
   width: 100%;
   background: #070b16;
@@ -196,7 +178,7 @@
   margin-bottom: 20px;
 }
 
-/************************************ EXPERIENCE CONTENT ************************************/
+/* ==================== EXPERIENCE CONTENT ==================== */
 
 .experience-content {
   min-width: 0;
@@ -205,10 +187,6 @@
 
 .headphones-experience {
   font-size: 3rem;
-  filter:
-    drop-shadow(0 0 4px rgba(167, 139, 250, 0.8))
-    drop-shadow(0 0 10px rgba(168, 85, 247, 0.55))
-    drop-shadow(0 0 18px rgba(96, 165, 250, 0.25));
 }
 
 .experience-eyebrow {
@@ -243,7 +221,6 @@
   margin: 1.5rem 0 0;
   font-size: clamp(1.35rem, 2vw, 1.9rem);
   font-weight: 700;
-
   background: linear-gradient(
     90deg,
     #c084fc 0%,
@@ -252,7 +229,6 @@
     #38bdf8 82%,
     #22d3ee 100%
   );
-
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -272,9 +248,10 @@
     #7c3aed,
     #4f46e5,
     #2563eb
-  );}
+  );
+}
 
-/************************************ EXPERIENCE IMAGE ************************************/
+/* ==================== EXPERIENCE IMAGE ==================== */
 
 .experience-image {
   position: relative;
@@ -305,9 +282,7 @@
   pointer-events: none;
 }
 
-
-
-/************************************ EXPERIENCE ACCENT ************************************/
+/* ==================== EXPERIENCE ACCENT ==================== */
 
 .experience-content::after {
   content: "";
@@ -322,19 +297,24 @@
     #8b5cf6,
     #60a5fa
   );
-
   box-shadow:
     0 0 10px rgba(168, 85, 247, 0.3),
     0 0 16px rgba(96, 165, 250, 0.15);
 }
 
+/* ==================== RESPONSIVE STYLES ==================== */
 
-/************************************ MEDIA QUERIES ************************************/
+/* ---------- 1885px AND ABOVE ---------- */
+
 @media (min-width: 1885px) {
+  /* ---------- EXPERIENCE SECTION ---------- */
+
   .experience-section {
     padding: 3rem 2rem;
   }
-  
+
+  /* ---------- EXPERIENCE CONTENT ---------- */
+
   .experience-content {
     width: 100%;
     max-width: 800px;
@@ -343,7 +323,11 @@
   }
 }
 
+/* ---------- 1600px–1884px ---------- */
+
 @media (min-width: 1600px) and (max-width: 1884px) {
+  /* ---------- EXPERIENCE CONTENT ---------- */
+
   .experience-content {
     width: 100%;
     max-width: 620px;
@@ -352,42 +336,62 @@
   }
 }
 
+/* ---------- 1200px–1884px ---------- */
+
 @media (min-width: 1200px) and (max-width: 1884px) {
+  /* ---------- EXPERIENCE SECTION ---------- */
+
   .experience-section {
     padding: 3rem 2rem;
   }
 }
 
+/* ---------- 992px–1199.98px ---------- */
+
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  /* ---------- EXPERIENCE SECTION ---------- */
 
   .experience-section {
     padding: 3rem 2rem;
   }
+
+  /* ---------- EXPERIENCE CONTAINER ---------- */
 
   .experience-container {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 2.5rem;
   }
 
+  /* ---------- EXPERIENCE IMAGE ---------- */
+
   .experience-image {
     left: 1rem;
   }
+
+  /* ---------- EXPERIENCE CONTENT ---------- */
 
   .experience-content {
     padding-left: 2rem;
   }
 }
 
+/* ---------- 768.01px–991.98px ---------- */
+
 @media (min-width: 768.01px) and (max-width: 991.98px) {
+  /* ---------- HERO SECTION ---------- */
 
   .hero-main {
     padding: 5.5rem 2.5rem 2.5rem;
   }
 
+  /* ---------- HERO CONTENT ---------- */
+
   .hero-description {
     max-width: 540px;
     font-size: 1rem;
   }
+
+  /* ---------- HERO FEATURES ---------- */
 
   .hero-features {
     gap: 0.6rem;
@@ -398,16 +402,22 @@
     font-size: 0.8rem;
   }
 
+  /* ---------- EXPERIENCE SECTION ---------- */
+
   .experience-section {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+
+  /* ---------- EXPERIENCE CONTAINER ---------- */
 
   .experience-container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
     padding: 2rem;
   }
+
+  /* ---------- EXPERIENCE CONTENT ---------- */
 
   .experience-content {
     order: 1;
@@ -424,6 +434,8 @@
     line-height: 1.7;
   }
 
+  /* ---------- EXPERIENCE IMAGE ---------- */
+
   .experience-image {
     order: 2;
     left: 0;
@@ -432,19 +444,24 @@
     margin: 0 auto;
   }
 
+  /* ---------- EXPERIENCE ICON ---------- */
+
   .headphones-experience {
     font-size: 1.7rem;
   }
 }
 
-
+/* ---------- 576px–768px ---------- */
 
 @media (min-width: 576px) and (max-width: 768px) {
+  /* ---------- HERO SECTION ---------- */
 
   .hero-main {
     justify-content: flex-start;
     padding: 1.25rem 2rem 2.5rem;
   }
+
+  /* ---------- HERO CONTENT ---------- */
 
   .hero-eyebrow {
     margin-top: 3.5rem;
@@ -456,6 +473,8 @@
     line-height: 1.6;
   }
 
+  /* ---------- HERO FEATURES ---------- */
+
   .hero-features {
     gap: 0.6rem;
   }
@@ -465,15 +484,21 @@
     font-size: 0.8rem;
   }
 
+  /* ---------- EXPERIENCE SECTION ---------- */
+
   .experience-section {
     padding-top: 2rem;
   }
+
+  /* ---------- EXPERIENCE CONTAINER ---------- */
+
   .experience-container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
     padding: 2rem;
-
   }
+
+  /* ---------- EXPERIENCE CONTENT ---------- */
 
   .experience-content {
     order: 1;
@@ -483,6 +508,7 @@
     padding-left: 0;
   }
 
+  /* ---------- EXPERIENCE IMAGE ---------- */
 
   .experience-image {
     order: 2;
@@ -491,9 +517,14 @@
     max-width: 620px;
     margin: 0 auto;
   }
+
+  /* ---------- EXPERIENCE ICON ---------- */
+
   .headphones-experience {
     font-size: 1.7rem;
   }
+
+  /* ---------- EXPERIENCE DESCRIPTION ---------- */
 
   .experience-description {
     max-width: 540px;
@@ -502,14 +533,17 @@
   }
 }
 
-
+/* ---------- 575.98px AND BELOW ---------- */
 
 @media (max-width: 575.98px) {
+  /* ---------- HERO SECTION ---------- */
 
   .hero-main {
     justify-content: flex-start;
     padding: 1.25rem 1rem 2.5rem;
   }
+
+  /* ---------- HERO CONTENT ---------- */
 
   .hero-eyebrow {
     margin-top: 4rem;
@@ -520,16 +554,18 @@
     line-height: 1.6;
   }
 
+  /* ---------- HERO FEATURES ---------- */
+
   .hero-features {
     display: none;
   }
 
+  /* ---------- HERO ACTIONS ---------- */
+
   .hero-actions {
     width: 100%;
-
     display: grid;
     grid-template-columns: 1fr;
-
     gap: 0.7rem;
   }
 
@@ -540,9 +576,13 @@
     justify-content: center;
   }
 
-  .experience-section{
+  /* ---------- EXPERIENCE SECTION ---------- */
+
+  .experience-section {
     padding: 4rem 1rem;
   }
+
+  /* ---------- EXPERIENCE CONTAINER ---------- */
 
   .experience-container {
     grid-template-columns: 1fr;
@@ -550,6 +590,8 @@
     padding: 0;
     margin-top: -20px;
   }
+
+  /* ---------- EXPERIENCE CONTENT ---------- */
 
   .experience-content {
     order: 1;
@@ -574,6 +616,8 @@
     line-height: 1.65;
   }
 
+  /* ---------- EXPERIENCE IMAGE ---------- */
+
   .experience-image {
     order: 2;
     left: 0;
@@ -581,13 +625,20 @@
     max-width: 520px;
     margin: 0 auto;
   }
+
+  /* ---------- EXPERIENCE ICON ---------- */
+
   .headphones-experience {
     font-size: 1.7rem;
   }
 
+  /* ---------- EXPERIENCE EYEBROW ---------- */
+
   .experience-eyebrow {
     margin-top: 1rem;
   }
+
+  /* ---------- SECTION EYEBROWS ---------- */
 
   .hero-eyebrow,
   .experience-eyebrow,
@@ -598,4 +649,3 @@
     font-weight: 700;
   }
 }
-

@@ -1,10 +1,12 @@
-/************************************ STUDENT COMMUNITY ************************************/
+/* ==================== STUDENT COMMUNITY SECTION ==================== */
 
 .student-community {
   width: 100%;
   padding: 6rem 4rem;
   background: #070b16;
 }
+
+/* ==================== MAIN CONTAINER ==================== */
 
 .student-community-container {
   width: 100%;
@@ -16,20 +18,18 @@
   align-items: center;
 }
 
-
-/************************************ COMMUNITY CARD ************************************/
+/* ==================== COMMUNITY CARD ==================== */
 
 .community-card {
   width: 100%;
   max-width: 480px;
   padding: 2rem;
   border-radius: 18px;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(19, 17, 39, 0.96),
-      rgba(8, 14, 28, 0.98)
-    );
+  background: linear-gradient(
+    145deg,
+    rgba(19, 17, 39, 0.96),
+    rgba(8, 14, 28, 0.98)
+  );
   border: 1px solid rgba(217, 70, 239, 0.55);
   box-shadow:
     0 0 18px rgba(217, 70, 239, 0.22),
@@ -37,8 +37,7 @@
     0 14px 35px rgba(0, 0, 0, 0.28);
 }
 
-
-/************************************ AVATARS ************************************/
+/* ==================== COMMUNITY AVATARS ==================== */
 
 .community-avatars {
   display: flex;
@@ -69,6 +68,8 @@
   border-radius: 50%;
 }
 
+/* ==================== AVATAR ACCENTS ==================== */
+
 .community-avatar-1 {
   border-color: #38bdf8;
 }
@@ -89,6 +90,7 @@
   border-color: #facc15;
 }
 
+/* ==================== AVATAR SPACING AND MORE INDICATOR ==================== */
 
 .community-avatar:first-child {
   margin-left: 0;
@@ -101,8 +103,7 @@
   font-weight: 700;
 }
 
-
-/************************************ BENEFITS ************************************/
+/* ==================== COMMUNITY BENEFITS ==================== */
 
 .community-benefits {
   margin-top: 1.4rem;
@@ -116,6 +117,8 @@
   gap: 0.9rem;
   padding: 0.75rem 0;
 }
+
+/* ==================== BENEFIT ICON ==================== */
 
 .community-benefit-icon {
   width: 40px;
@@ -131,6 +134,8 @@
   font-size: 1rem;
 }
 
+/* ==================== BENEFIT CONTENT ==================== */
+
 .community-benefit-content h3 {
   margin: 0;
   color: #f8f9fa;
@@ -145,8 +150,7 @@
   line-height: 1.5;
 }
 
-
-/************************************ CTA ************************************/
+/* ==================== COMMUNITY CTA ==================== */
 
 .community-cta {
   width: 100%;
@@ -180,12 +184,13 @@
   box-shadow: 0 0 26px rgba(124, 58, 237, 0.3);
 }
 
-
-/************************************ CONTENT ************************************/
+/* ==================== COMMUNITY CONTENT ==================== */
 
 .community-content {
   max-width: 720px;
 }
+
+/* ==================== COMMUNITY EYEBROW ==================== */
 
 .community-eyebrow {
   display: flex;
@@ -204,6 +209,8 @@
     drop-shadow(0 0 5px rgba(167, 139, 250, 0.8))
     drop-shadow(0 0 12px rgba(168, 85, 247, 0.45));
 }
+
+/* ==================== COMMUNITY TITLE ==================== */
 
 .community-title {
   margin: 1.2rem 0 0;
@@ -229,53 +236,71 @@
   color: transparent;
 }
 
+/* ==================== COMMUNITY DESCRIPTION ==================== */
+
 .community-description {
- max-width: 620px;
+  max-width: 620px;
   margin: 1.25rem 0 0;
   color: #aaa6b8;
   font-size: 1.05rem;
   line-height: 1.75;
 }
 
-/************************************ RESPONSIVE ************************************/
+/* ==================== RESPONSIVE STYLES ==================== */
 
+/* ---------- 992px–1199.98px ---------- */
 
-/* LARGE TABLET / SMALL DESKTOP: 992px - 1199.98px */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  /* ---------- SECTION ---------- */
+
   .student-community {
     padding: 5rem 3rem;
   }
+
+  /* ---------- MAIN CONTAINER ---------- */
 
   .student-community-container {
     grid-template-columns: minmax(330px, 0.85fr) minmax(0, 1.15fr);
     gap: 3.5rem;
   }
 
+  /* ---------- COMMUNITY CARD ---------- */
+
   .community-card {
     max-width: 430px;
   }
+
+  /* ---------- COMMUNITY TITLE ---------- */
 
   .community-title {
     font-size: clamp(2.75rem, 4vw, 3.25rem);
   }
 }
 
+/* ---------- 768.01px–991.98px ---------- */
 
-/* TABLET: 768.01px - 991.98px */
 @media (min-width: 768.01px) and (max-width: 991.98px) {
+  /* ---------- SECTION ---------- */
+
   .student-community {
     padding: 4.5rem 2.5rem;
   }
+
+  /* ---------- MAIN CONTAINER ---------- */
 
   .student-community-container {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
+  /* ---------- COMMUNITY CONTENT ---------- */
+
   .community-content {
     order: 1;
     max-width: 700px;
   }
+
+  /* ---------- COMMUNITY CARD ---------- */
 
   .community-card {
     order: 2;
@@ -284,10 +309,14 @@
     justify-self: center;
   }
 
+  /* ---------- COMMUNITY TITLE ---------- */
+
   .community-title {
     font-size: 2.7rem;
     line-height: 1;
   }
+
+  /* ---------- COMMUNITY DESCRIPTION ---------- */
 
   .community-description {
     max-width: 620px;
@@ -295,6 +324,8 @@
     font-size: 1rem;
     line-height: 1.7;
   }
+
+  /* ---------- COMMUNITY EYEBROW ---------- */
 
   .community-eyebrow {
     margin-top: -2.5rem;
@@ -305,21 +336,29 @@
   }
 }
 
-
+/* ---------- 576px–768px ---------- */
 
 @media (min-width: 576px) and (max-width: 768px) {
+  /* ---------- SECTION ---------- */
+
   .student-community {
     padding: 4.25rem 2rem;
   }
+
+  /* ---------- MAIN CONTAINER ---------- */
 
   .student-community-container {
     grid-template-columns: 1fr;
     gap: 2.75rem;
   }
 
+  /* ---------- COMMUNITY CONTENT ---------- */
+
   .community-content {
     order: 1;
   }
+
+  /* ---------- COMMUNITY CARD ---------- */
 
   .community-card {
     order: 2;
@@ -328,10 +367,14 @@
     justify-self: center;
   }
 
+  /* ---------- COMMUNITY TITLE ---------- */
+
   .community-title {
     font-size: 2.7rem;
     line-height: 1;
   }
+
+  /* ---------- COMMUNITY DESCRIPTION ---------- */
 
   .community-description {
     max-width: 540px;
@@ -339,34 +382,47 @@
     line-height: 1.6;
   }
 
+  /* ---------- COMMUNITY AVATARS ---------- */
+
   .community-avatar {
     width: 54px;
     height: 54px;
   }
 
+  /* ---------- COMMUNITY EYEBROW ---------- */
+
   .community-eyebrow {
     margin-top: -20px;
   }
+
   .community-eyebrow i {
     font-size: 3rem;
   }
 }
 
-
+/* ---------- 575.98px AND BELOW ---------- */
 
 @media (max-width: 575.98px) {
+  /* ---------- SECTION ---------- */
+
   .student-community {
     padding: 4rem 1rem;
   }
+
+  /* ---------- MAIN CONTAINER ---------- */
 
   .student-community-container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 
+  /* ---------- COMMUNITY CONTENT ---------- */
+
   .community-content {
     order: 1;
   }
+
+  /* ---------- COMMUNITY CARD ---------- */
 
   .community-card {
     order: 2;
@@ -374,6 +430,8 @@
     max-width: none;
     padding: 1.25rem;
   }
+
+  /* ---------- COMMUNITY EYEBROW ---------- */
 
   .community-eyebrow {
     gap: 0.6rem;
@@ -385,17 +443,23 @@
     font-size: 1.7rem;
   }
 
+  /* ---------- COMMUNITY TITLE ---------- */
+
   .community-title {
     margin-top: 1rem;
     font-size: 2.35rem;
     line-height: 1.05;
   }
 
+  /* ---------- COMMUNITY DESCRIPTION ---------- */
+
   .community-description {
     margin-top: 1.25rem;
     font-size: 0.92rem;
     line-height: 1.65;
   }
+
+  /* ---------- COMMUNITY AVATARS ---------- */
 
   .community-avatars {
     justify-content: center;
@@ -415,6 +479,8 @@
     font-size: 1.15rem;
   }
 
+  /* ---------- COMMUNITY BENEFITS ---------- */
+
   .community-benefit {
     gap: 0.75rem;
   }
@@ -431,6 +497,8 @@
   .community-benefit-content p {
     font-size: 0.76rem;
   }
+
+  /* ---------- COMMUNITY CTA ---------- */
 
   .community-cta {
     margin-top: 1.25rem;

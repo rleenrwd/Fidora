@@ -1,42 +1,51 @@
+/* ==================== GLOBAL THEME ==================== */
+
 :root {
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-
   color: #f5f3ff;
   background: #070b16;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
+
+/* ==================== BOX SIZING ==================== */
 
 * {
   box-sizing: border-box;
 }
 
+/* ==================== SCROLL BEHAVIOR ==================== */
+
 html {
   scroll-behavior: smooth;
 }
+
+/* ==================== BODY ==================== */
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  /* background:
-    radial-gradient(circle at top, #1a1630 0%, #0b0b12 45%),
-    #0b0b12; */
-  color: #f5f3ff;
+  background: #070b16;
 }
+
+/* ==================== LINKS ==================== */
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
+/* ==================== FORM TYPOGRAPHY ==================== */
+
 button,
 input,
 select {
   font: inherit;
 }
+
+/* ==================== APPLICATION ROOT ==================== */
 
 #root {
   min-height: 100vh;

@@ -1,35 +1,35 @@
-/************************************ FEATURED SPACES ************************************/
+/* ==================== FEATURED SPACES SECTION ==================== */
+
 .featured-spaces {
   position: relative;
   width: 100%;
   padding: 6rem 4rem;
-
   background:
     linear-gradient(
-        90deg,
-        rgba(7, 11, 22, 0.90) 0%,
-        rgba(7, 11, 22, 0.80) 35%,
-        rgba(7, 11, 22, 0.72) 100%
-  ),
-    url("../../assets/new-space.png");
-
+      90deg,
+      rgba(7, 11, 22, 0.90) 0%,
+      rgba(7, 11, 22, 0.80) 35%,
+      rgba(7, 11, 22, 0.72) 100%
+    ),
+    url("../../assets/homepage/new-space.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* ==================== MAIN CONTAINER ==================== */
 
 .featured-spaces-container {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 2.2fr);
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 2.1fr);
   gap: 4rem;
   align-items: start;
 }
 
-
-/************************************ INTRO ************************************/
+/* ==================== SECTION INTRO ==================== */
 
 .featured-spaces-intro {
   position: sticky;
@@ -50,6 +50,7 @@
   font-weight: 800;
   line-height: 0.98;
   letter-spacing: -0.05em;
+  width: 500px;
 }
 
 .featured-spaces-title span {
@@ -74,6 +75,8 @@
   line-height: 1.7;
 }
 
+/* ==================== SECTION CTA ==================== */
+
 .featured-spaces-cta {
   display: inline-flex;
   align-items: center;
@@ -97,8 +100,7 @@
   transform: translateY(-2px);
 }
 
-
-/************************************ SPACE GRID ************************************/
+/* ==================== ROOM GRID ==================== */
 
 .featured-spaces-grid {
   display: grid;
@@ -106,8 +108,7 @@
   gap: 1.25rem;
 }
 
-
-/************************************ SPACE CARD ************************************/
+/* ==================== ROOM CARDS ==================== */
 
 .featured-space-card {
   min-width: 0;
@@ -127,6 +128,8 @@
   transform: translateY(-6px);
 }
 
+/* ==================== ROOM CARD ACCENTS ==================== */
+
 .featured-space-card.focus-lounge {
   border: 1px solid rgba(56, 189, 248, 0.7);
   box-shadow:
@@ -134,7 +137,6 @@
     0 0 18px rgba(56, 189, 248, 0.28),
     0 0 34px rgba(56, 189, 248, 0.18);
 }
-
 
 .featured-space-card.night-owl-room {
   border: 1px solid rgba(249, 115, 22, 0.7);
@@ -144,7 +146,6 @@
     0 0 34px rgba(249, 115, 22, 0.18);
 }
 
-
 .featured-space-card.deep-work-booth {
   border: 1px solid rgba(236, 72, 153, 0.7);
   box-shadow:
@@ -153,8 +154,7 @@
     0 0 34px rgba(236, 72, 153, 0.18);
 }
 
-
-/************************************ SPACE IMAGE ************************************/
+/* ==================== ROOM IMAGE ==================== */
 
 .featured-space-image {
   position: relative;
@@ -185,9 +185,10 @@
     rgba(7, 11, 22, 0.05) 35%,
     rgba(7, 11, 22, 0.72) 100%
   );
-
   pointer-events: none;
 }
+
+/* ==================== ROOM AURA BADGE ==================== */
 
 .featured-space-badge {
   position: absolute;
@@ -210,14 +211,32 @@
   letter-spacing: 0.08em;
 }
 
+/* ==================== ROOM AURA ACCENTS ==================== */
+
+.featured-space-card.focus-lounge .featured-space-badge {
+  border-color: rgba(56, 189, 248, 0.7);
+  color: #38bdf8;
+}
+
+.featured-space-card.night-owl-room .featured-space-badge {
+  border-color: rgba(249, 115, 22, 0.7);
+  color: #f97316;
+}
+
+.featured-space-card.deep-work-booth .featured-space-badge {
+  border-color: rgba(236, 72, 153, 0.7);
+  color: #ec4899;
+}
+
+/* ==================== ROOM AURA TEXT ==================== */
+
 .featured-space-badge span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-
-/************************************ CARD CONTENT ************************************/
+/* ==================== CARD CONTENT ==================== */
 
 .featured-space-content {
   flex: 1;
@@ -242,34 +261,14 @@
   line-height: 1.2;
 }
 
-.featured-space-number {
-  color: #6f6a7d;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
-.featured-space-vibe {
-  margin: 0.8rem 0 0;
-  color: #a78bfa;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  line-height: 1.4;
-
-  text-transform: uppercase;
-}
-
 .featured-space-description {
-  margin: 1rem 0 0;
+  margin-top: -10px;
   color: #aaa6b8;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.6;
-  
 }
 
-
-/************************************ CARD META ************************************/
+/* ==================== CARD METADATA ==================== */
 
 .featured-space-meta {
   display: flex;
@@ -306,12 +305,9 @@
 
 .featured-space-detail-value {
   overflow: hidden;
-
   color: #f0edf6;
-
   font-size: 0.78rem;
   font-weight: 600;
-
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -323,6 +319,8 @@
   font-weight: 700;
   letter-spacing: 0.1em;
 }
+
+/* ==================== ROOM LINK ==================== */
 
 .featured-space-link {
   width: 36px;
@@ -347,8 +345,7 @@
   transform: translateX(2px);
 }
 
-
-/************************************ STATUS ************************************/
+/* ==================== STATUS MESSAGES ==================== */
 
 .featured-spaces-status {
   grid-column: 1 / -1;
@@ -361,20 +358,25 @@
   color: #fca5a5;
 }
 
-/************************************ RESPONSIVE ************************************/
+/* ==================== RESPONSIVE STYLES ==================== */
 
-
+/* ---------- 992px–1199.98px ---------- */
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  /* ---------- SECTION ---------- */
 
   .featured-spaces {
     padding: 5rem 3rem;
   }
 
+  /* ---------- MAIN CONTAINER ---------- */
+
   .featured-spaces-container {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
+  /* ---------- SECTION INTRO ---------- */
 
   .featured-spaces-intro {
     position: static;
@@ -382,7 +384,7 @@
   }
 
   .featured-spaces-title {
-     font-size: clamp(2.7rem, 4vw, 3rem);
+    font-size: clamp(2.7rem, 4vw, 3rem);
   }
 
   .featured-spaces-description {
@@ -392,24 +394,31 @@
     line-height: 1.7;
   }
 
+  /* ---------- ROOM GRID ---------- */
+
   .featured-spaces-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
   }
 }
 
-
+/* ---------- 768.01px–991.98px ---------- */
 
 @media (min-width: 768.01px) and (max-width: 991.98px) {
+  /* ---------- SECTION ---------- */
 
   .featured-spaces {
     padding: 4.5rem 2.5rem;
   }
 
+  /* ---------- MAIN CONTAINER ---------- */
+
   .featured-spaces-container {
     grid-template-columns: 1fr;
     gap: 2.75rem;
   }
+
+  /* ---------- SECTION INTRO ---------- */
 
   .featured-spaces-intro {
     position: static;
@@ -425,28 +434,37 @@
     max-width: 600px;
   }
 
+  /* ---------- ROOM GRID ---------- */
+
   .featured-spaces-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
   }
+
+  /* ---------- ROOM CARD VISIBILITY ---------- */
 
   .featured-space-card:nth-child(3) {
     display: none;
   }
 }
 
-
+/* ---------- 576px–768px ---------- */
 
 @media (min-width: 576px) and (max-width: 768px) {
+  /* ---------- SECTION ---------- */
 
   .featured-spaces {
     padding: 4.25rem 2rem;
   }
 
+  /* ---------- MAIN CONTAINER ---------- */
+
   .featured-spaces-container {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+
+  /* ---------- SECTION INTRO ---------- */
 
   .featured-spaces-intro {
     position: static;
@@ -463,47 +481,61 @@
     line-height: 1.6;
   }
 
+  /* ---------- ROOM GRID ---------- */
+
   .featured-spaces-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  /* ---------- ROOM CARDS ---------- */
 
   .featured-space-card {
     width: min(100%, 520px);
     justify-self: center;
   }
 
+  /* ---------- ROOM IMAGE ---------- */
+
   .featured-space-image {
     aspect-ratio: 16 / 9;
   }
 
+  /* ---------- CARD METADATA ---------- */
+
   .featured-space-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .featured-space-detail {
+    flex: 0 1 auto;
+  }
+
+  .featured-space-link {
+    flex-shrink: 0;
+  }
 }
 
-.featured-space-detail {
-  flex: 0 1 auto;
-}
-
-.featured-space-link {
-  flex-shrink: 0;
-}
-}
-
+/* ---------- 575.98px AND BELOW ---------- */
 
 @media (max-width: 575.98px) {
+  /* ---------- SECTION ---------- */
 
   .featured-spaces {
     padding: 4rem 1rem;
   }
 
+  /* ---------- MAIN CONTAINER ---------- */
+
   .featured-spaces-container {
     grid-template-columns: 1fr;
     gap: 2.25rem;
   }
+
+  /* ---------- SECTION INTRO ---------- */
 
   .featured-spaces-intro {
     position: static;
@@ -520,31 +552,38 @@
 
   .featured-spaces-description {
     margin-top: 1.25rem;
-
     font-size: 0.95rem;
     line-height: 1.65;
   }
 
+  /* ---------- SECTION CTA ---------- */
+
   .featured-spaces-cta {
     width: 100%;
-
     justify-content: center;
-
     margin-top: 1.5rem;
   }
+
+  /* ---------- ROOM GRID ---------- */
 
   .featured-spaces-grid {
     grid-template-columns: 1fr;
     gap: 1.4rem;
   }
 
+  /* ---------- ROOM CARDS ---------- */
+
   .featured-space-card {
     width: 100%;
   }
 
+  /* ---------- ROOM IMAGE ---------- */
+
   .featured-space-image {
     aspect-ratio: 16 / 9;
   }
+
+  /* ---------- CARD CONTENT ---------- */
 
   .featured-space-content {
     padding: 1.1rem;
@@ -558,6 +597,8 @@
     font-size: 0.85rem;
   }
 
+  /* ---------- CARD METADATA ---------- */
+
   .featured-space-meta {
     gap: 0.55rem;
   }
@@ -566,9 +607,18 @@
     font-size: 0.72rem;
   }
 
+  /* ---------- ROOM LINK ---------- */
+
   .featured-space-link {
     width: 34px;
     height: 34px;
   }
-  
+
+  /* ---------- SECTION TITLE OVERRIDE ---------- */
+
+  .featured-spaces-title {
+    width: 100%;
+    font-size: 2.35rem;
+    line-height: 1.05;
+  }
 }

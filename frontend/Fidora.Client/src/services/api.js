@@ -13,3 +13,71 @@ export async function getSpaces() {
 export function getApiAssetUrl(path) {
     return `${API_BASE_URL}${path}`;
 }
+
+export async function getSessions(spaceId, date) {
+    const params = new URLSearchParams();
+
+    if (spaceId) {
+        params.append("spaceId", spaceId);
+    }
+
+    if (date) {
+        params.append("date", date);
+    }
+
+    const response = await fetch(`${API_BASE_URL}/api/sessions?${params.toString()}`);
+
+    if (!response.ok) {
+        throw new Error("Failed to load sessions.");
+    }
+
+    return response.json();
+}
+
+export async function createBooking(booking) {
+    const response = await fetch(`${API_BASE_URL}/api/bookings`, {
+        method: "POST",
+        headers: {"Content-Type":"application/json",},
+        body: JSON.stringify(booking),
+    });
+
+    if (!response.ok) {
+        throw new Error("Failed to create booking.");
+    }
+
+    return response.json();
+}
+
+export async function getBooking(bookingReference) {
+  const response = await fetch(
+    `${API_BASE_URL}/api/bookings/${encodeURIComponent(bookingReference)}`
+  );
+
+  if (response.status === 404) {
+    throw new Error("No booking found. Check your reference and try again.");
+  }
+
+  if (!response.ok) {
+    throw new Error("Unable to find your booking. Please try again.");
+  }
+
+  return response.json();
+}
+
+export async function cancelBooking(bookingReference) {
+  const response = await fetch(
+    `${API_BASE_URL}/api/bookings/${encodeURIComponent(bookingReference)}/cancel`,
+    { method: "POST" }
+  );
+
+  if (!response.ok) {
+    const problem = await response.json().catch(() => null);
+
+    throw new Error(
+      problem?.detail ||
+        "Unable to cancel your booking. Please try again."
+    );
+  }
+
+  return response.json();
+}
