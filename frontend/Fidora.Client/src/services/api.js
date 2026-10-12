@@ -47,3 +47,37 @@ export async function createBooking(booking) {
 
     return response.json();
 }
+
+export async function getBooking(bookingReference) {
+  const response = await fetch(
+    `${API_BASE_URL}/api/bookings/${encodeURIComponent(bookingReference)}`
+  );
+
+  if (response.status === 404) {
+    throw new Error("No booking found. Check your reference and try again.");
+  }
+
+  if (!response.ok) {
+    throw new Error("Unable to find your booking. Please try again.");
+  }
+
+  return response.json();
+}
+
+export async function cancelBooking(bookingReference) {
+  const response = await fetch(
+    `${API_BASE_URL}/api/bookings/${encodeURIComponent(bookingReference)}/cancel`,
+    { method: "POST" }
+  );
+
+  if (!response.ok) {
+    const problem = await response.json().catch(() => null);
+
+    throw new Error(
+      problem?.detail ||
+        "Unable to cancel your booking. Please try again."
+    );
+  }
+
+  return response.json();
+}

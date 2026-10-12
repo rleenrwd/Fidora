@@ -83,6 +83,14 @@ function SpacesPage() {
     };
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+      });
+    }, []);
+
   return (
     <div className="spaces-page">
       <main className="spaces-page-main">
@@ -165,6 +173,7 @@ function SpacesPage() {
                         </h2>
 
                         <p><i>{space.description}</i></p>
+                      
                       </div>
                       {details?.experience && (
                         <p className="spaces-room-experience">

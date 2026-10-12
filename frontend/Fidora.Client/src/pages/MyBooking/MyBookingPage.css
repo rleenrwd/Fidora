@@ -1,0 +1,915 @@
+/* ==================== PAGE ==================== */
+
+.my-booking-page {
+  min-height: 100vh;
+  color: #f5f3ff;
+  background:
+    radial-gradient(
+      ellipse at top left,
+      rgba(139, 92, 246, 0.12),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at top right,
+      rgba(59, 130, 246, 0.08),
+      transparent 50%
+    ),
+    #090c1a;
+}
+
+.my-booking-page *,
+.my-booking-page *::before,
+.my-booking-page *::after {
+  box-sizing: border-box;
+}
+
+.my-booking-main {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 80vh;
+  margin: 0 auto;
+  padding: 10rem 2rem 4rem;
+}
+
+/* ==================== NAVBAR ==================== */
+
+.my-booking-nav {
+  width: 100%;
+}
+
+/* ==================== PAGE HEADING ==================== */
+
+.my-booking-heading {
+  margin-bottom: 2.5rem;
+}
+
+.my-booking-eyebrow {
+  margin: 0 0 0.75rem;
+  color: #b49aff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+}
+
+.my-booking-heading h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+}
+
+.my-booking-heading h1 span {
+  color: #b49aff;
+  background: linear-gradient(90deg, #c084fc, #8b5cf6, #38bdf8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.my-booking-description {
+  margin: 0;
+  color: #c5bfd8;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ==================== MAIN LAYOUT ==================== */
+
+.my-booking-layout {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.my-booking-layout-found {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "preview lookup"
+    "preview details";
+  column-gap: 2rem;
+  max-width: none;
+  align-items: stretch;
+}
+
+.my-booking-result {
+  display: contents;
+}
+
+/* ==================== BOOKING LOOKUP ==================== */
+
+.my-booking-lookup {
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #101323, #090d18);
+  box-shadow:
+    0 0 18px rgba(168, 85, 247, 0.1),
+    0 0 36px rgba(139, 92, 246, 0.05);
+}
+
+.my-booking-layout-found .my-booking-lookup {
+  grid-area: lookup;
+  border-bottom: none;
+  border-radius: 18px 18px 0 0;
+  box-shadow: none;
+}
+
+.my-booking-lookup h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.my-booking-lookup-description {
+  margin: 0 0 1.5rem;
+  color: #b9b3cc;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ==================== LOOKUP FORM ==================== */
+
+.my-booking-lookup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+/* ==================== FORM FIELD ==================== */
+
+.my-booking-field {
+  min-width: 0;
+}
+
+.my-booking-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #e5def4;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.my-booking-field input {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: 10px;
+  outline: none;
+  color: #f5f3ff;
+  background: #0b0f1e;
+  font: inherit;
+  font-size: 0.9rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.my-booking-field input::placeholder {
+  color: #77718a;
+}
+
+.my-booking-field input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.12);
+}
+
+.my-booking-field input[aria-invalid="true"] {
+  border-color: #fb7185;
+}
+
+/* ==================== SHARED BUTTON STYLES ==================== */
+
+.my-booking-find-button,
+.my-booking-cancel-button,
+.my-booking-keep-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: 48px;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* ==================== FIND BOOKING BUTTON ==================== */
+
+.my-booking-find-button {
+  width: 100%;
+  border: none;
+  color: #fff;
+  background: linear-gradient(100deg, #9333ea, #285bea);
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.12);
+}
+
+.my-booking-find-button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.25);
+}
+
+/* ==================== CANCEL BOOKING BUTTON ==================== */
+
+.my-booking-cancel-button {
+  width: 100%;
+  border: 1px solid rgba(251, 113, 133, 0.8);
+  color: #fb7185;
+  background: rgba(251, 113, 133, 0.04);
+}
+
+.my-booking-cancel-button:hover {
+  background: rgba(251, 113, 133, 0.12);
+  box-shadow: 0 0 16px rgba(251, 113, 133, 0.1);
+}
+
+/* ==================== KEEP BOOKING BUTTON ==================== */
+
+.my-booking-keep-button {
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  color: #e9e3f7;
+  background: #111526;
+}
+
+.my-booking-keep-button:hover {
+  background: #1a1d32;
+}
+
+/* ==================== FOCUS AND DISABLED STATES ==================== */
+
+.my-booking-page button:focus-visible {
+  outline: 2px solid #c4b5fd;
+  outline-offset: 4px;
+}
+
+.my-booking-page button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.my-booking-field input:disabled {
+  opacity: 0.65;
+}
+
+/* ==================== ROOM PREVIEW ==================== */
+
+.my-booking-preview {
+  grid-area: preview;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid rgba(var(--room-accent), 0.65);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #101323, #090d18);
+  box-shadow:
+    0 0 16px rgba(var(--room-accent), 0.24),
+    0 0 36px rgba(var(--room-accent), 0.12),
+    0 0 60px rgba(var(--room-accent), 0.06);
+}
+
+/* ==================== ROOM IMAGE ==================== */
+
+.my-booking-room-image {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  background: #15182a;
+}
+
+.my-booking-room-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==================== ROOM CONTENT ==================== */
+
+.my-booking-room-content {
+  padding: 1.25rem 0 1.5rem;
+}
+
+.my-booking-room-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.my-booking-room-heading h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.4vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+/* ==================== ROOM AURA BADGE ==================== */
+
+.my-booking-aura {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(var(--room-accent), 0.75);
+  border-radius: 999px;
+  color: rgb(var(--room-accent));
+  background: rgba(9, 12, 26, 0.85);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ==================== ROOM DESCRIPTION ==================== */
+
+.my-booking-room-description {
+  margin: 0.85rem 0 0;
+  color: #c5bfd8;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.7;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+/* ==================== ROOM DETAIL BUBBLES ==================== */
+
+.my-booking-room-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin: auto 0 0;
+}
+
+.my-booking-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+  padding: 0.9rem 0.7rem;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+  border-radius: 11px;
+  background: rgba(18, 21, 38, 0.7);
+}
+
+.my-booking-meta-item > i {
+  flex-shrink: 0;
+  color: #a78bfa;
+  font-size: 1.1rem;
+}
+
+.my-booking-meta-item > div {
+  min-width: 0;
+}
+
+.my-booking-meta-item dt {
+  margin-bottom: 0.25rem;
+  color: #928ba8;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.my-booking-meta-item dd {
+  margin: 0;
+  color: #f0eafb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ==================== BOOKING DETAILS ==================== */
+
+.my-booking-details {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0 1.5rem 1.5rem;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  border-top: none;
+  border-radius: 0 0 18px 18px;
+  background: #090d18;
+}
+
+/* ==================== BOOKING DETAILS HEADING ==================== */
+
+.my-booking-details-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.my-booking-details-heading h2 {
+  margin: 0;
+  color: #b49aff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ==================== BOOKING STATUS ==================== */
+
+.my-booking-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.my-booking-status-confirmed {
+  border-color: rgba(45, 212, 191, 0.65);
+  color: #5eead4;
+  background: rgba(45, 212, 191, 0.08);
+}
+
+.my-booking-status-cancelled {
+  border-color: rgba(251, 113, 133, 0.5);
+  color: #fda4af;
+  background: rgba(251, 113, 133, 0.06);
+}
+
+/* ==================== SESSION DETAILS ==================== */
+
+.my-booking-session-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem 1rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 12px;
+  background: rgba(14, 18, 33, 0.65);
+}
+
+.my-booking-session-details > div {
+  min-width: 0;
+}
+
+.my-booking-session-details dt {
+  margin-bottom: 0.35rem;
+  color: #9d95b2;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.my-booking-session-details dd {
+  margin: 0;
+  color: #f0eafb;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* ==================== CANCELLATION ==================== */
+
+.my-booking-cancellation {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.my-booking-cancel-note {
+  margin: 0.65rem 0 0;
+  color: #9d95b2;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ==================== CANCELLATION CONFIRMATION ==================== */
+
+.my-booking-cancel-confirmation {
+  padding: 1rem;
+  border: 1px solid rgba(251, 113, 133, 0.3);
+  border-radius: 12px;
+  background: rgba(251, 113, 133, 0.04);
+}
+
+.my-booking-cancel-confirmation h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.my-booking-cancel-confirmation p {
+  margin: 0 0 1rem;
+  color: #c5bfd8;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+/* ==================== CANCELLATION ACTIONS ==================== */
+
+.my-booking-cancel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.my-booking-cancel-actions > button {
+  flex: 1 1 160px;
+}
+
+/* ==================== MESSAGES ==================== */
+
+.my-booking-error,
+.my-booking-success,
+.my-booking-cancelled-message {
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.my-booking-error {
+  border-color: rgba(251, 113, 133, 0.3);
+  color: #fda4af;
+  background: rgba(251, 113, 133, 0.06);
+}
+
+.my-booking-success {
+  border-color: rgba(45, 212, 191, 0.3);
+  color: #99f6e4;
+  background: rgba(45, 212, 191, 0.06);
+}
+
+.my-booking-cancelled-message {
+  border-color: rgba(167, 139, 250, 0.2);
+  color: #c5bfd8;
+  background: rgba(167, 139, 250, 0.04);
+}
+
+.my-booking-lookup-form .my-booking-error {
+  margin-top: 0;
+}
+
+/* ==================== PAGE HEADING OVERRIDES ==================== */
+
+.my-booking-heading > .my-booking-eyebrow {
+  margin: 0 0 0.65rem;
+  color: #a78bfa;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.my-booking-description {
+  margin: 0.85rem 0 0;
+  color: #aaa6b8;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+/* ==================== RESPONSIVE STYLES ==================== */
+
+/* ---------- 992px AND ABOVE ---------- */
+
+@media (min-width: 992px) {
+  /* ---------- ROOM DETAIL BUBBLES ---------- */
+
+  .my-booking-room-meta {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .my-booking-meta-item {
+    padding: 0.65rem 0.8rem;
+  }
+}
+
+/* ---------- 992px–1199.98px ---------- */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* ---------- PAGE ---------- */
+
+  .my-booking-main {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  /* ---------- MAIN LAYOUT ---------- */
+
+  .my-booking-layout-found {
+    column-gap: 1.5rem;
+  }
+
+  /* ---------- ROOM DETAIL BUBBLES ---------- */
+
+  .my-booking-room-meta {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- 991.98px AND BELOW ---------- */
+
+@media (max-width: 991.98px) {
+  /* ---------- PAGE HEADING ---------- */
+
+  .my-booking-heading {
+    max-width: 540px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* ---------- MAIN LAYOUT ---------- */
+
+  .my-booking-layout,
+  .my-booking-layout-found {
+    display: block;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  /* ---------- BOOKING LOOKUP ---------- */
+
+  .my-booking-layout-found .my-booking-lookup {
+    padding: 1.25rem;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    border-radius: 16px;
+    background: linear-gradient(145deg, #101323, #090d18);
+  }
+
+  /* ---------- COMBINED RESULT CARD ---------- */
+
+  .my-booking-result {
+    display: block;
+    overflow: hidden;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(var(--room-accent), 0.65);
+    border-radius: 18px;
+    background: linear-gradient(145deg, #101323, #090d18);
+    box-shadow:
+      0 0 16px rgba(var(--room-accent), 0.18),
+      0 0 36px rgba(var(--room-accent), 0.08);
+  }
+
+  /* ---------- ROOM PREVIEW ---------- */
+
+  .my-booking-preview {
+    display: block;
+    padding: 0.85rem 0.85rem 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* ---------- ROOM CONTENT ---------- */
+
+  .my-booking-room-content {
+    padding: 1.25rem 0.25rem;
+  }
+
+  .my-booking-room-heading h2 {
+    font-size: 1.75rem;
+  }
+
+  /* ---------- ROOM DETAIL BUBBLES ---------- */
+
+  .my-booking-room-meta {
+    display: none;
+  }
+
+  /* ---------- BOOKING DETAILS ---------- */
+
+  .my-booking-details {
+    display: block;
+    padding: 0 1.1rem 1.25rem;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .my-booking-details-heading {
+    padding-top: 1.25rem;
+  }
+
+  /* ---------- CANCELLATION ---------- */
+
+  .my-booking-cancellation {
+    margin-top: 0;
+  }
+}
+
+/* ---------- 768.01px–991.98px ---------- */
+
+@media (min-width: 768.01px) and (max-width: 991.98px) {
+  /* ---------- PAGE ---------- */
+
+  .my-booking-main {
+    padding: 1.5rem 1.5rem 3rem;
+  }
+
+  /* ---------- NAVBAR ---------- */
+
+  .my-booking-nav {
+    margin-bottom: 3rem;
+  }
+
+  .my-booking-page .fidora-navbar {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    min-height: 60px;
+    padding: 0.5rem 1.25rem;
+  }
+}
+
+/* ---------- 576px–768px ---------- */
+
+@media (min-width: 576px) and (max-width: 768px) {
+  /* ---------- PAGE ---------- */
+
+  .my-booking-main {
+    padding: 1.25rem 2rem 3rem;
+  }
+
+  /* ---------- NAVBAR ---------- */
+
+  .my-booking-nav {
+    max-width: 540px;
+    margin: 0 auto 3rem;
+  }
+
+  .my-booking-page .fidora-navbar {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: calc(100% - 6rem);
+    max-width: 440px;
+    margin: 0 auto;
+    min-height: 58px;
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- PAGE HEADING ---------- */
+
+  .my-booking-heading h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ---------- 575.98px AND BELOW ---------- */
+
+@media (max-width: 575.98px) {
+  /* ---------- PAGE ---------- */
+
+  .my-booking-main {
+    padding: 1.25rem 1rem 3rem;
+  }
+
+  /* ---------- NAVBAR ---------- */
+
+  .my-booking-nav {
+    margin-bottom: 2.5rem;
+  }
+
+  .my-booking-page .fidora-navbar {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: calc(100% - 2rem);
+    max-width: 440px;
+    margin: 0 auto;
+    min-height: 58px;
+    padding: 0.5rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- PAGE HEADING ---------- */
+
+  .my-booking-heading > .my-booking-eyebrow {
+    font-size: 0.68rem;
+  }
+
+  .my-booking-heading {
+    margin-bottom: 1.75rem;
+  }
+
+  .my-booking-heading h1 {
+    font-size: 2.5rem;
+  }
+
+  .my-booking-description {
+    font-size: 0.9rem;
+  }
+
+  /* ---------- BOOKING LOOKUP ---------- */
+
+  .my-booking-lookup,
+  .my-booking-layout-found .my-booking-lookup {
+    padding: 1.1rem;
+  }
+
+  .my-booking-lookup h2 {
+    font-size: 1.4rem;
+  }
+
+  .my-booking-lookup-description {
+    margin-bottom: 1.1rem;
+    font-size: 0.85rem;
+  }
+
+  /* ---------- COMBINED RESULT CARD ---------- */
+
+  .my-booking-result {
+    border-radius: 16px;
+  }
+
+  /* ---------- ROOM PREVIEW ---------- */
+
+  .my-booking-preview {
+    padding: 0.65rem 0.65rem 0;
+  }
+
+  /* ---------- ROOM IMAGE ---------- */
+
+  .my-booking-room-image {
+    height: clamp(190px, 50vw, 260px);
+    aspect-ratio: auto;
+    border-radius: 10px;
+  }
+
+  /* ---------- ROOM CONTENT ---------- */
+
+  .my-booking-room-content {
+    padding: 1rem 0.3rem 1.25rem;
+  }
+
+  .my-booking-room-heading {
+    align-items: flex-start;
+  }
+
+  .my-booking-room-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .my-booking-room-description {
+    font-size: 0.85rem;
+  }
+
+  /* ---------- BOOKING DETAILS ---------- */
+
+  .my-booking-details {
+    padding: 0 0.95rem 1rem;
+  }
+
+  /* ---------- SESSION DETAILS ---------- */
+
+  .my-booking-session-details {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0.9rem;
+  }
+
+  .my-booking-session-details dd {
+    font-size: 0.85rem;
+  }
+
+  /* ---------- CANCELLATION ACTIONS ---------- */
+
+  .my-booking-cancel-actions {
+    flex-direction: column;
+  }
+
+  .my-booking-cancel-actions > button {
+    flex: auto;
+    width: 100%;
+  }
+}

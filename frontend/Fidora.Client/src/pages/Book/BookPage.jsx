@@ -250,6 +250,14 @@ function BookPage() {
     }
   }
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+      });
+    }, []);
+
   return (
     <div className="book-page">
       <main className="book-page-main">
@@ -281,11 +289,6 @@ function BookPage() {
                 <p className="booking-panel-eyebrow">STEP 01</p>
 
                 <h2>Choose Your Aura</h2>
-
-                <p>
-                  Each space brings its own atmosphere,
-                  playlist, and energy.
-                </p>
               </div>
 
               <div className="booking-space-list">
@@ -672,6 +675,7 @@ function BookPage() {
                     onChange={(event) =>
                       setCustomerName(event.target.value)
                     }
+                    required
                   />
                 </div>
 
@@ -689,6 +693,7 @@ function BookPage() {
                     onChange={(event) =>
                       setEmail(event.target.value)
                     }
+                    required
                   />
                 </div>
 

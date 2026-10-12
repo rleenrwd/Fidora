@@ -1,8 +1,8 @@
-/* PAGE */
+/* ==================== PAGE ==================== */
+
 .spaces-page {
   min-height: 100vh;
   color: #f5f3ff;
-
   background:
     linear-gradient(
       rgba(9, 12, 26, 0.88),
@@ -22,11 +22,13 @@
   padding: 10rem 2rem 4rem;
 }
 
+/* ==================== NAVBAR ==================== */
+
 .spaces-page-nav {
   width: 100%;
 }
 
-/* HEADING */
+/* ==================== PAGE HEADING ==================== */
 
 .spaces-page-heading {
   margin-bottom: 2.5rem;
@@ -68,7 +70,7 @@
   line-height: 1.7;
 }
 
-/* ROOM GRID */
+/* ==================== ROOM GRID ==================== */
 
 .spaces-page-grid {
   display: grid;
@@ -76,6 +78,8 @@
   align-items: stretch;
   gap: 1.5rem;
 }
+
+/* ==================== ROOM CARDS ==================== */
 
 .spaces-room-card {
   min-width: 0;
@@ -90,7 +94,6 @@
     #101323,
     #090d18
   );
-
   box-shadow:
     0 0 16px rgba(var(--room-accent), 0.14),
     0 0 34px rgba(var(--room-accent), 0.07);
@@ -98,10 +101,10 @@
 }
 
 .spaces-room-card:hover {
-    transform: scale(1.015);
+  transform: scale(1.015);
 }
 
-/* ROOM IMAGE */
+/* ==================== ROOM IMAGE ==================== */
 
 .spaces-room-image {
   position: relative;
@@ -131,6 +134,8 @@
   object-fit: cover;
 }
 
+/* ==================== ROOM AURA BADGE ==================== */
+
 .spaces-room-aura {
   position: absolute;
   bottom: 0.9rem;
@@ -149,7 +154,7 @@
   -webkit-backdrop-filter: blur(8px);
 }
 
-/* ROOM CONTENT */
+/* ==================== ROOM CONTENT ==================== */
 
 .spaces-room-content {
   flex: 1;
@@ -171,18 +176,24 @@
   min-height: 4.8em;
   margin: 0;
   color: #bbb6cf;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   line-height: 1.6;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+  padding-bottom: 1.25rem;
 }
+
+/* ==================== ROOM EXPERIENCE DESCRIPTION ==================== */
 
 .spaces-room-experience {
   margin: 1rem 0 0;
   color: #bbb6cf;
   font-size: 0.9rem;
   line-height: 1.75;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+  padding-bottom: 1.25rem;
 }
 
-/* PLAYLIST AND CAPACITY */
+/* ==================== PLAYLIST AND CAPACITY ==================== */
 
 .spaces-room-meta {
   display: grid;
@@ -223,6 +234,8 @@
   line-height: 1.5;
 }
 
+/* ==================== ROOM AMENITY ==================== */
+
 .spaces-room-amenity {
   display: flex;
   align-items: center;
@@ -239,14 +252,15 @@
   font-size: 1.1rem;
 }
 
-/* BEST FOR AND ETIQUETTE */
+/* ==================== BEST FOR AND ETIQUETTE ==================== */
 
 .spaces-room-detail {
   padding: 1.25rem 0;
   border-bottom: 1px solid rgba(167, 139, 250, 0.2);
 }
 
-.spaces-room-detail h3, etiquette {
+.spaces-room-detail h3,
+etiquette {
   margin: 0 0 0.75rem;
   color: #bca5f5;
   font-size: 0.7rem;
@@ -255,7 +269,6 @@
   text-transform: uppercase;
 }
 
-
 .spaces-room-detail p {
   min-height: 3.2em;
   margin: 0;
@@ -263,6 +276,8 @@
   font-size: 0.85rem;
   line-height: 1.6;
 }
+
+/* ==================== ROOM RULES ==================== */
 
 .spaces-room-rules {
   display: flex;
@@ -288,12 +303,14 @@
   font-size: 0.95rem;
 }
 
-/* BOOKING ACTION */
+/* ==================== BOOKING ACTION ==================== */
 
 .spaces-room-action {
   margin-top: auto;
   padding-top: 1.5rem;
 }
+
+/* ==================== BOOKING BUTTON ==================== */
 
 .spaces-room-book-button {
   min-height: 48px;
@@ -315,10 +332,7 @@
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-
-  box-shadow:
-    0 0 14px rgba(139, 92, 246, 0.16);
-
+  box-shadow: 0 0 14px rgba(139, 92, 246, 0.16);
   transition:
     filter 0.2s ease,
     box-shadow 0.2s ease;
@@ -335,6 +349,8 @@
   outline-offset: 4px;
 }
 
+/* ==================== BOOKING ACTION NOTE ==================== */
+
 .spaces-room-action p {
   margin: 0.65rem 0 0;
   color: #9992ae;
@@ -343,7 +359,7 @@
   text-align: center;
 }
 
-/* PAGE MESSAGES */
+/* ==================== PAGE MESSAGES ==================== */
 
 .spaces-page-message {
   margin: 2rem 0;
@@ -355,6 +371,8 @@
   color: #fda4af;
 }
 
+/* ==================== PAGE CLOSING TEXT ==================== */
+
 .spaces-page-closing {
   margin: 2rem 0 0;
   color: #aaa3be;
@@ -363,20 +381,30 @@
   text-align: center;
 }
 
-/**************************** RESPONSIVE STYLES ****************************/
+/* ==================== RESPONSIVE STYLES ==================== */
+
+/* ---------- 992px–1199.98px ---------- */
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  /* ---------- PAGE ---------- */
+
   .spaces-page-main {
     padding-inline: 1.5rem;
   }
+
+  /* ---------- ROOM GRID ---------- */
 
   .spaces-page-grid {
     gap: 1rem;
   }
 
+  /* ---------- ROOM CONTENT ---------- */
+
   .spaces-room-content {
     padding-inline: 0.25rem;
   }
+
+  /* ---------- PLAYLIST AND CAPACITY ---------- */
 
   .spaces-room-meta {
     gap: 0.5rem;
@@ -389,13 +417,19 @@
   .spaces-room-meta-item dd {
     font-size: 0.75rem;
   }
-    .spaces-room-experience {
+
+  /* ---------- ROOM EXPERIENCE DESCRIPTION ---------- */
+
+  .spaces-room-experience {
     display: none;
   }
 }
 
+/* ---------- 991.98px AND BELOW ---------- */
 
 @media (max-width: 991.98px) {
+  /* ---------- ROOM GRID ---------- */
+
   .spaces-page-grid {
     grid-template-columns: minmax(0, 1fr);
     max-width: 640px;
@@ -403,10 +437,14 @@
     gap: 2rem;
   }
 
+  /* ---------- PAGE HEADING ---------- */
+
   .spaces-page-heading {
     max-width: 640px;
     margin-inline: auto;
   }
+
+  /* ---------- ROOM CONTENT ---------- */
 
   .spaces-room-content {
     padding: 1.5rem 0.75rem 0.5rem;
@@ -421,24 +459,31 @@
     min-height: 0;
   }
 
+  /* ---------- ROOM DETAILS AND RULES ---------- */
+
   .spaces-room-meta-item dd,
   .spaces-room-rules li {
     font-size: 0.9rem;
   }
 
+  /* ---------- PAGE MESSAGES ---------- */
+
   .spaces-page-message {
     max-width: 640px;
     margin-inline: auto;
   }
-
-
 }
 
+/* ---------- 768.01px–991.98px ---------- */
 
 @media (min-width: 768.01px) and (max-width: 991.98px) {
+  /* ---------- PAGE ---------- */
+
   .spaces-page-main {
     padding: 1.5rem 1.5rem 3rem;
   }
+
+  /* ---------- NAVBAR ---------- */
 
   .spaces-page-nav {
     margin-bottom: 3rem;
@@ -455,6 +500,8 @@
     padding: 0.5rem 1.25rem;
   }
 
+  /* ---------- ROOM IMAGE ---------- */
+
   .spaces-room-image {
     height: clamp(210px, 54vw, 260px);
     aspect-ratio: auto;
@@ -465,12 +512,21 @@
     height: 100%;
     object-fit: cover;
   }
+
+  /* ---------- ROOM EXPERIENCE DESCRIPTION ---------- */
+
   .spaces-room-experience {
     display: none;
   }
+
+  /* ---------- ROOM ETIQUETTE ---------- */
+
   .etiquette {
     display: none;
   }
+
+  /* ---------- GRID AND HEADING WIDTH ---------- */
+
   .spaces-page-grid,
   .spaces-page-heading {
     width: 100%;
@@ -480,11 +536,16 @@
   }
 }
 
+/* ---------- 576px–768px ---------- */
 
 @media (min-width: 576px) and (max-width: 768px) {
+  /* ---------- PAGE ---------- */
+
   .spaces-page-main {
     padding: 1.25rem 2rem 3rem;
   }
+
+  /* ---------- NAVBAR ---------- */
 
   .spaces-page-nav {
     max-width: 540px;
@@ -503,13 +564,21 @@
     flex-wrap: wrap;
   }
 
+  /* ---------- ROOM EXPERIENCE DESCRIPTION ---------- */
+
   .spaces-room-experience {
     display: none;
   }
+
+  /* ---------- ROOM ETIQUETTE ---------- */
+
   .etiquette {
     display: none;
   }
-   .spaces-room-image {
+
+  /* ---------- ROOM IMAGE ---------- */
+
+  .spaces-room-image {
     height: clamp(210px, 54vw, 260px);
     aspect-ratio: auto;
   }
@@ -519,6 +588,9 @@
     height: 100%;
     object-fit: cover;
   }
+
+  /* ---------- GRID AND HEADING WIDTH ---------- */
+
   .spaces-page-grid,
   .spaces-page-heading {
     width: 100%;
@@ -526,15 +598,18 @@
     margin-left: auto;
     margin-right: auto;
   }
-
 }
 
-
+/* ---------- 575.98px AND BELOW ---------- */
 
 @media (max-width: 575.98px) {
+  /* ---------- PAGE ---------- */
+
   .spaces-page-main {
     padding: 1.25rem 1rem 3rem;
   }
+
+  /* ---------- NAVBAR ---------- */
 
   .spaces-page-nav {
     margin-bottom: 2.5rem;
@@ -551,6 +626,8 @@
     padding: 0.5rem 1rem;
     flex-wrap: wrap;
   }
+
+  /* ---------- PAGE HEADING ---------- */
 
   .spaces-page-eyebrow {
     font-size: 0.68rem;
@@ -573,14 +650,20 @@
     max-width: 95%;
   }
 
+  /* ---------- ROOM GRID ---------- */
+
   .spaces-page-grid {
     gap: 1.5rem;
   }
+
+  /* ---------- ROOM CARDS ---------- */
 
   .spaces-room-card {
     padding: 0.6rem;
     border-radius: 16px;
   }
+
+  /* ---------- ROOM CONTENT ---------- */
 
   .spaces-room-content {
     padding: 1.25rem 0.4rem 0.4rem;
@@ -590,9 +673,13 @@
     font-size: 1.6rem;
   }
 
+  /* ---------- ROOM EXPERIENCE DESCRIPTION ---------- */
+
   .spaces-room-experience {
     display: none;
   }
+
+  /* ---------- ROOM AURA BADGE ---------- */
 
   .spaces-room-aura {
     bottom: 0.7rem;
@@ -600,23 +687,32 @@
     font-size: 0.7rem;
   }
 
+  /* ---------- ROOM ETIQUETTE ---------- */
+
   .etiquette {
     display: none;
   }
+
+  /* ---------- ROOM DETAILS AND RULES ---------- */
 
   .spaces-room-meta-item dd,
   .spaces-room-rules li {
     font-size: 0.8rem;
   }
 
-
   .spaces-room-rules {
     display: none;
   }
+
+  /* ---------- PAGE CLOSING TEXT ---------- */
+
   .spaces-page-closing {
     font-size: 0.8rem;
   }
- .spaces-room-image {
+
+  /* ---------- ROOM IMAGE ---------- */
+
+  .spaces-room-image {
     height: clamp(210px, 54vw, 260px);
     aspect-ratio: auto;
   }
@@ -627,4 +723,3 @@
     object-fit: cover;
   }
 }
-
