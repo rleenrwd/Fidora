@@ -7,13 +7,19 @@
 
 > **Project scope:** Fidora is an intentionally compact, end-to-end software engineering portfolio project—not an operating business or a real reservation service. Its spaces, sessions, and bookings are demonstration data. The goal was to design, implement, automatically test, and deploy a complete booking workflow without expanding the project into an unnecessarily large platform.
 
+
 ## Overview
 
 *Your study night out.*
 
-Fidora imagines a contemporary study lounge built around curated lo-fi music and distinct room **auras**—a combination of atmosphere, lighting, musical style, and study format. The name combines **lo-fidelity** and **aura**. Students visiting the fictional lounge could choose an environment that matches how they want to work, from social focus to late-night quiet or distraction-free deep work.
+Fidora imagines a contemporary study lounge built around curated lo-fi music, silent-disco-style wireless headphones, and distinct room **auras**. Each room offers a unique atmosphere shaped by its lighting, visual design, seating arrangement, and musical style.
 
-This repository contains the **customer-facing booking application** for that fictional venue, not a music-streaming or room-management system. Visitors can explore spaces, find scheduled sessions, check seat availability, create a reservation, retrieve it using a booking reference, and cancel it.
+Every room has its own curated lo-fi playlist, streamed directly to students through wireless silent-disco headphones. This creates an immersive, shared-but-personal listening experience where students can study alongside others while enjoying music tailored to their chosen environment—from energetic lo-fi hip-hop to relaxed jazz and ambient deep-focus sounds.
+
+The name **Fidora** combines **lo-fidelity** and **aura**, reflecting the lounge's focus on music-driven study environments.
+
+This repository contains the **customer-facing booking application** for that fictional venue, not the music-streaming or headphone-management system. Visitors can explore spaces, find scheduled sessions, check seat availability, create a reservation, retrieve it using a booking reference, and cancel it.
+
 
 ## Screenshots
 
@@ -144,5 +150,5 @@ The frontend uses `VITE_API_BASE_URL` for environment-specific API URLs. The API
    npm install
    npm run dev
    ```
-   
+
 **Created by [Robert L. Norwood](https://github.com/rleenrwd)**
